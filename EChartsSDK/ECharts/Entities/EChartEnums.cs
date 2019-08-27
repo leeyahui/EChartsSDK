@@ -379,4 +379,20 @@ public enum CoordinateSystemType
         [EnumMember(Value = "piecewise")]
         piecewise
     }
+
+    public enum Orient
+    {
+        [EnumMember(Value = "horizontal")]
+        horizontal,
+        [EnumMember(Value = "piecewise")]
+        vertical
+    }
+
+    public enum SelectedMode
+    {
+        [EnumMember(Value = "single")]
+        single,
+        [EnumMember(Value = "multiple")]
+        multiple
+    }
 }
