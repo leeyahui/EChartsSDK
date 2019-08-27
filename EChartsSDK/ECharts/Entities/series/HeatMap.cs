@@ -1,13 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class HeatMap : ChartSeries<HeatMap>
     {
+        public HeatMap()
+        {
+            type = ChartType.heatmap;
+        }
+
+        public HeatMap(string name)
+            : this()
+        {
+            this.name = name;
+        }
+
         public int? blurSize { get; set; }
 
         public bool? hoverable { get; set; }
@@ -64,16 +72,6 @@ namespace ECharts.Entities.series
         {
             this.minAlpha = minAlpha;
             return this;
-        }
-
-        public HeatMap() {
-            this.type = ChartType.heatmap;
-        }
-
-        public HeatMap(string name)
-            : this()
-        {
-            this.name = name;
         }
     }
 }

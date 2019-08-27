@@ -1,9 +1,6 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities.data
 {
@@ -83,16 +80,16 @@ namespace ECharts.Entities.data
 
         public ItemStyle ItemStyle()
         {
-            if (this.itemStyle == null)
-                itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+            if (itemStyle == null)
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
 
         public EntityStyle<LineLabelStyle> Label()
         {
-            if(this.label==null)
-                this.label = new EntityStyle<LineLabelStyle>();
-            return this.label;
+            if (label == null)
+                label = new EntityStyle<LineLabelStyle>();
+            return label;
         }
 
         public T Symbol(object symbol)
@@ -103,7 +100,7 @@ namespace ECharts.Entities.data
 
         public T Text()
         {
-            this.name = name;
+            name = name;
             return this as T;
         }
 
@@ -115,12 +112,10 @@ namespace ECharts.Entities.data
 
         public T Coord(params double[] values)
         {
-            if (this.coord == null)
-                this.coord = new List<object>();
+            if (coord == null)
+                coord = new List<object>();
             values.ToList().ForEach(v => coord.Add(v));
             return this as T;
         }
-
-
     }
 }

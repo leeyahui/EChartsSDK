@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
@@ -15,11 +10,9 @@ namespace ECharts.Entities.axis
 
         public TextStyle TextStyle()
         {
-            if (this.textStyle == null)
-                textStyle = new style.TextStyle();
+            if (textStyle == null)
+                textStyle = new TextStyle();
             return textStyle;
         }
     }
-
-    
 }

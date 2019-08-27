@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ECharts.Entities.series
 {
     public class Pie : ChartSeries<Pie>
     {
+        public Pie()
+        {
+            type = ChartType.pie;
+        }
+
+        public Pie(string name) : this()
+        {
+            this.name = name;
+        }
+
         public IList<string> center { get; set; }
 
         public object radius { get; set; }
@@ -75,8 +81,6 @@ namespace ECharts.Entities.series
         }
 
 
-
-
         public Pie LegendHoverLink(bool legendHoverLink)
         {
             this.legendHoverLink = legendHoverLink;
@@ -88,7 +92,7 @@ namespace ECharts.Entities.series
             this.selectedMode = selectedMode;
             return this;
         }
-    
+
         public Pie SelectedOffset(int selectedOffset)
         {
             this.selectedOffset = selectedOffset;
@@ -135,17 +139,6 @@ namespace ECharts.Entities.series
         {
             this.center = center;
             return this;
-        }        
-
-        public Pie() {
-            this.type = ChartType.pie;
         }
-
-        public Pie(string name):this() {
-            this.name = name;
-        }
-
-       
-
     }
 }

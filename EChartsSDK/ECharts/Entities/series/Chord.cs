@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class Chord : ChartSeries<Chord>
     {
+        public Chord()
+        {
+            type = ChartType.chord;
+        }
+
+        public Chord(string name) : this()
+        {
+            this.name = name;
+        }
+
         public IList<Category> categories { get; set; }
 
         public IList<Node> nodes { get; set; }
@@ -46,13 +53,14 @@ namespace ECharts.Entities.series
 
         public Chord Links(params Link[] values)
         {
-            if (this.links == null)
+            if (links == null)
                 links = new List<Link>();
             values.ToList().ForEach(v => links.Add(v));
             return this;
         }
 
-        public Chord SetMatrix(int[,] matrix) {
+        public Chord SetMatrix(int[,] matrix)
+        {
             this.matrix = matrix;
             return this;
         }
@@ -74,8 +82,6 @@ namespace ECharts.Entities.series
             this.sort = sort;
             return this;
         }
-
-       
 
 
         public Chord ShowScaleText(bool showScaleText)
@@ -121,7 +127,6 @@ namespace ECharts.Entities.series
         }
 
 
-
         public Chord MaxRadius(int maxRadius)
         {
             this.maxRadius = maxRadius;
@@ -151,20 +156,5 @@ namespace ECharts.Entities.series
             this.ribbonType = ribbonType;
             return this;
         }
-
-
-      
-
-
-        public Chord() {
-            this.type = ChartType.chord;
-        }
-
-        public Chord(string name):this() {
-            this.name = name;
-        }
-
-
-
     }
 }

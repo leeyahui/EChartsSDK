@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
@@ -26,7 +21,7 @@ namespace ECharts.Entities.axis
         public TextStyle TextStyle()
         {
             if (textStyle == null)
-                textStyle = new style.TextStyle();
+                textStyle = new TextStyle();
             return textStyle;
         }
 
@@ -35,11 +30,13 @@ namespace ECharts.Entities.axis
             this.rotate = rotate;
             return this;
         }
+
         public AxisLabel Margin(int margin)
         {
             this.margin = margin;
             return this;
         }
+
         public AxisLabel Clickable(bool clickable)
         {
             this.clickable = clickable;
@@ -64,6 +61,5 @@ namespace ECharts.Entities.axis
             this.formatter = formatter;
             return this;
         }
-
     }
 }

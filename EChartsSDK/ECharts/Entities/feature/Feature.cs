@@ -1,16 +1,7 @@
-﻿using ECharts.Entities.series;
-using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.feature
+﻿namespace ECharts.Entities.feature
 {
     public class Feature
     {
-
         public Mark mark { get; set; }
 
         public DataZoom dataZoom { get; set; }
@@ -29,14 +20,14 @@ namespace ECharts.Entities.feature
         public MagicType MagicType()
         {
             if (magicType == null)
-                magicType = new feature.MagicType();
+                magicType = new MagicType();
             return magicType;
         }
 
         public FeatureBrush Brush()
         {
             if (brush == null)
-                brush = new feature.FeatureBrush();
+                brush = new FeatureBrush();
             return brush;
         }
 
@@ -44,7 +35,7 @@ namespace ECharts.Entities.feature
         public Mark Mark()
         {
             if (mark == null)
-                mark = new feature.Mark();
+                mark = new Mark();
             return mark;
         }
 
@@ -58,7 +49,7 @@ namespace ECharts.Entities.feature
         public DataView DataView()
         {
             if (dataView == null)
-                dataView = new feature.DataView();
+                dataView = new DataView();
             return dataView;
         }
 
@@ -66,7 +57,7 @@ namespace ECharts.Entities.feature
         public Restore Restore()
         {
             if (restore == null)
-                restore = new feature.Restore();
+                restore = new Restore();
             return restore;
         }
 

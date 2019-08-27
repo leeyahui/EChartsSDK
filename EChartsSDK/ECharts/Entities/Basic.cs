@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities
+﻿namespace ECharts.Entities
 {
     public abstract class Basic<T>
         where T : class
@@ -181,7 +175,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animation"></param>
         public T Animation(bool animation)
         {
@@ -189,7 +182,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationThreshold"></param>
         public T AnimationThreshold(int animationThreshold)
         {
@@ -197,7 +189,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDuration"></param>
         public T AnimationDuration(int animationDuration)
         {
@@ -205,7 +196,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationEasing"></param>
         public T AnimationEasing(string animationEasing)
         {
@@ -213,7 +203,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDelay"></param>
         public T AnimationDelay(int animationDelay)
         {
@@ -221,7 +210,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDurationUpdate"></param>
         public T AnimationDurationUpdate(int animationDurationUpdate)
         {
@@ -229,7 +217,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationEasingUpdate"></param>
         public T AnimationEasingUpdate(string animationEasingUpdate)
         {
@@ -237,7 +224,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDelayUpdate"></param>
         public T AnimationDelayUpdate(int animationDelayUpdate)
         {
@@ -246,7 +232,6 @@ namespace ECharts.Entities
         }
 
 
-        /// 
         /// <param name="width"></param>
         public T Width(int width)
         {
@@ -260,7 +245,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="height"></param>
         public T Height(string height)
         {
@@ -269,7 +253,6 @@ namespace ECharts.Entities
         }
 
 
-        /// 
         /// <param name="padding"></param>
         public T Padding(object padding)
         {
@@ -277,7 +260,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="itemGap"></param>
         public T ItemGap(int itemGap)
         {
@@ -285,7 +267,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="left"></param>
         public T Left(object left)
         {
@@ -293,7 +274,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="right"></param>
         public T Right(object right)
         {
@@ -301,7 +281,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="bottom"></param>
         public T Bottom(object bottom)
         {
@@ -315,7 +294,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="top"></param>
         public T Top(object top)
         {
@@ -340,7 +318,5 @@ namespace ECharts.Entities
             this.max = max;
             return this as T;
         }
-
-
     }
 }

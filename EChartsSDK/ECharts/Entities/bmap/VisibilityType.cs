@@ -6,25 +6,18 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+namespace ECharts.Entities.bmap
+{
+    public enum VisibilityType
+    {
+        /// <summary>
+        ///     ÏÔÊ¾
+        /// </summary>
+        on,
 
-
-
-namespace ECharts.Entities.bmap {
-	public enum VisibilityType  {
-
-		/// <summary>
-		/// ÏÔÊ¾
-		/// </summary>
-		on,
-		/// <summary>
-		/// Òþ²Ø
-		/// </summary>
-		off
-
-	}//end VisibilityType
-
-}//end namespace bmap
+        /// <summary>
+        ///     Òþ²Ø
+        /// </summary>
+        off
+    } //end VisibilityType
+} //end namespace bmap

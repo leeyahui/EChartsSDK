@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
@@ -24,9 +19,9 @@ namespace ECharts.Entities.axis
 
         public AreaStyle AreaStyle()
         {
-            if (this.areaStyle == null)
-                this.areaStyle = new style.AreaStyle();
-            return this.areaStyle;
+            if (areaStyle == null)
+                areaStyle = new AreaStyle();
+            return areaStyle;
         }
 
         public SplitArea Show(bool show)
@@ -34,7 +29,5 @@ namespace ECharts.Entities.axis
             this.show = show;
             return this;
         }
-
-
     }
 }

@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class Force : ChartSeries<Force>
     {
+        public Force()
+        {
+            type = ChartType.force;
+        }
+
+        public Force(string name) : this()
+        {
+            this.name = name;
+        }
+
         public IList<Category> categories { get; set; }
 
         public object nodes { get; set; }
@@ -64,7 +71,7 @@ namespace ECharts.Entities.series
 
         public Force UseWorker(bool useWorker)
         {
-            this.large = useWorker;
+            large = useWorker;
             return this;
         }
 
@@ -112,29 +119,23 @@ namespace ECharts.Entities.series
 
         public Force Categories(params Category[] values)
         {
-            if (this.categories == null)
-                this.categories = new List<Category>();
-            this.categories = values.ToList();
+            if (categories == null)
+                categories = new List<Category>();
+            categories = values.ToList();
             return this;
         }
 
         public Force Nodes(params Node[] values)
         {
-            if (this.nodes == null)
-            {
-                this.nodes = new List<Node>();
-            }
-            this.nodes = values.ToList();
+            if (nodes == null) nodes = new List<Node>();
+            nodes = values.ToList();
             return this;
         }
 
         public Force Links(params Link[] values)
         {
-            if (this.links == null)
-            {
-                this.links = new List<Link>();
-            }
-            this.links = values.ToList();
+            if (links == null) links = new List<Link>();
+            links = values.ToList();
             return this;
         }
 
@@ -173,17 +174,5 @@ namespace ECharts.Entities.series
             this.ribbonType = ribbonType;
             return this;
         }
-
-
-        public Force() {
-            this.type = ChartType.force;
-        }
-
-        public Force(string name):this()
-        {
-            this.name = name;
-        }
-     
-
     }
 }

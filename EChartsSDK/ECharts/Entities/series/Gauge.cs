@@ -1,14 +1,20 @@
-﻿using ECharts.Entities.axis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using ECharts.Entities.axis;
 
 namespace ECharts.Entities.series
 {
     public class Gauge : ChartSeries<Gauge>
     {
+        public Gauge()
+        {
+            type = ChartType.gauge;
+        }
+
+        public Gauge(string name) : this()
+        {
+            this.name = name;
+        }
+
         public IList<string> center { get; set; }
 
         public object radius { get; set; }
@@ -97,46 +103,36 @@ namespace ECharts.Entities.series
 
         public GaugePointer Pointer()
         {
-            if (this.pointer == null)
-                pointer = new Entities.GaugePointer();
+            if (pointer == null)
+                pointer = new GaugePointer();
             return pointer;
         }
 
         public GaugeTitle Title()
         {
-            if (this.title == null)
+            if (title == null)
                 title = new GaugeTitle();
             return title;
         }
 
         public GaugeDetail Detail()
         {
-            if (this.detail == null)
-                detail = new Entities.GaugeDetail();
+            if (detail == null)
+                detail = new GaugeDetail();
             return detail;
-        }
-
-        public Gauge()
-        {
-            this.type = ChartType.gauge;
-        }
-
-        public Gauge(string name):this()
-        {
-            this.name = name;
         }
 
         public AxisLabel AxisLabel()
         {
-            if(axisLabel==null)
-            axisLabel = new AxisLabel();
+            if (axisLabel == null)
+                axisLabel = new AxisLabel();
             return axisLabel;
         }
 
         public AxisLine AxisLine()
         {
-            if(axisLine==null)
-            axisLine = new AxisLine();
+            if (axisLine == null)
+                axisLine = new AxisLine();
             return axisLine;
         }
 
@@ -154,9 +150,5 @@ namespace ECharts.Entities.series
             splitLine = new SplitLine();
             return splitLine;
         }
-
-        
-
-
     }
 }

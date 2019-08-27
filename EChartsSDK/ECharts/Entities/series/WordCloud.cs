@@ -1,14 +1,17 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class WordCloud : ChartSeries<WordCloud>
     {
+        public WordCloud()
+        {
+            type = ChartType.wordCloud;
+        }
+
+        public WordCloud(string name) : this()
+        {
+            this.name = name;
+        }
+
         public object center { get; set; }
 
         public object size { get; set; }
@@ -22,7 +25,7 @@ namespace ECharts.Entities.series
         public AutoSizeConfig AutoSize()
         {
             if (autoSize == null)
-                autoSize = new AutoSizeConfig();            
+                autoSize = new AutoSizeConfig();
             return autoSize;
         }
 
@@ -43,22 +46,12 @@ namespace ECharts.Entities.series
             this.textPadding = textPadding;
             return this;
         }
-        
-
 
 
         public WordCloud TextRotation(object textRotation)
         {
             this.textRotation = textRotation;
             return this;
-        }
-
-        public WordCloud() {
-            this.type = ChartType.wordCloud;
-        }
-
-        public WordCloud(string name) : this() {
-            this.name = name;
         }
     }
 }

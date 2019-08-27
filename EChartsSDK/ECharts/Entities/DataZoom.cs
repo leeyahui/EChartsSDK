@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ECharts.Entities.style;
+﻿using ECharts.Entities.style;
 
 namespace ECharts.Entities
 {
-    public class DataZoom:Basic<DataZoom>
+    public class DataZoom : Basic<DataZoom>
     {
         public DataZoomType? type { get; set; }
 
@@ -27,10 +22,10 @@ namespace ECharts.Entities
 
         public object xAxisIndex { get; set; }
 
-        public Entities.style.Normal hanleStyle { get; set; }
+        public Normal hanleStyle { get; set; }
 
 
-        public Entities.style.Normal dataBackground { get; set; }
+        public Normal dataBackground { get; set; }
 
         public object yAxisIndex { get; set; }
 
@@ -83,11 +78,13 @@ namespace ECharts.Entities
             this.realtime = realtime;
             return this;
         }
+
         public DataZoom Start(int start)
         {
             this.start = start;
             return this;
         }
+
         public DataZoom End(int end)
         {
             this.end = end;
@@ -109,18 +106,16 @@ namespace ECharts.Entities
 
         public Normal HandleStyle()
         {
-            if (this.hanleStyle == null)
-                this.hanleStyle = new Normal();
-            return this.hanleStyle;
+            if (hanleStyle == null)
+                hanleStyle = new Normal();
+            return hanleStyle;
         }
+
         public Normal DataBackground()
         {
-            if (this.dataBackground == null)
-                this.dataBackground = new Normal();
-            return this.dataBackground;
+            if (dataBackground == null)
+                dataBackground = new Normal();
+            return dataBackground;
         }
-
-                
-
     }
 }

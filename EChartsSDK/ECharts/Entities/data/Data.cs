@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.data
+﻿namespace ECharts.Entities.data
 {
     public class Data : BasicData<Data>
     {

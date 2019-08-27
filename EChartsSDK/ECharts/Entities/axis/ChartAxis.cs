@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.axis
+﻿namespace ECharts.Entities.axis
 {
     public class ChartAxis<T> : Axis where T : class
     {
@@ -23,7 +17,7 @@ namespace ECharts.Entities.axis
         public string position { get; set; }
 
         public int? splitNumber { get; set; }
-        
+
 
         public object min { get; set; }
 
@@ -36,32 +30,29 @@ namespace ECharts.Entities.axis
         public bool? scale { get; set; }
 
         public int? interval { get; set; }
+
         public T Interval(int interval)
         {
             this.interval = interval;
             return this as T;
-
         }
 
         public T Top(int top)
         {
             this.top = top;
             return this as T;
-
         }
 
         public T Bottom(int bottom)
         {
             this.bottom = bottom;
             return this as T;
-
         }
 
         public T Max(int max)
         {
             this.max = max;
             return this as T;
-
         }
 
         public T Max(string max)
@@ -75,6 +66,7 @@ namespace ECharts.Entities.axis
             this.min = min;
             return this as T;
         }
+
         public T Scale(bool scale)
         {
             this.scale = scale;
@@ -101,15 +93,15 @@ namespace ECharts.Entities.axis
 
         public T Name(int splitNumber)
         {
-            this.name = name;
+            name = name;
             return this as T;
         }
 
         public T Position(PositionType p)
         {
-            this.position = p.ToString();
+            position = p.ToString();
             return this as T;
-        } 
+        }
 
         public T NameLocation(NameLocationType nameLocation)
         {
@@ -129,8 +121,5 @@ namespace ECharts.Entities.axis
             this.splitNumber = splitNumber;
             return this as T;
         }
-
-
-
     }
 }

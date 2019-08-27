@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ECharts.Entities
 {
-    public abstract class AbstractData<T> : IData<T> where T:class
+    public abstract class AbstractData<T> : IData<T> where T : class
     {
-        public object data;
-
         private bool clickable;
+        public object data;
 
         private bool hoverable;
 
@@ -34,9 +29,15 @@ namespace ECharts.Entities
 
         public int? animationDelayUpdate { get; set; }
 
-        
+        public T Data(params object[] values)
+        {
+            if (values == null) return default;
+            if (data == null) data = new List<object>();
+            data = values;
+            return this as T;
+        }
 
-        /// 
+
         /// <param name="slient"></param>
         public T Silent(bool silent)
         {
@@ -44,7 +45,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animation"></param>
         public T Animation(bool animation)
         {
@@ -52,7 +52,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationThreshold"></param>
         public T AnimationThreshold(int animationThreshold)
         {
@@ -60,7 +59,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDuration"></param>
         public T AnimationDuration(int animationDuration)
         {
@@ -68,7 +66,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationEasing"></param>
         public T AnimationEasing(string animationEasing)
         {
@@ -76,7 +73,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDelay"></param>
         public T AnimationDelay(int animationDelay)
         {
@@ -84,7 +80,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDurationUpdate"></param>
         public T AnimationDurationUpdate(int animationDurationUpdate)
         {
@@ -92,7 +87,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationEasingUpdate"></param>
         public T AnimationEasingUpdate(string animationEasingUpdate)
         {
@@ -100,7 +94,6 @@ namespace ECharts.Entities
             return this as T;
         }
 
-        /// 
         /// <param name="animationDelayUpdate"></param>
         public T AnimationDelayUpdate(int animationDelayUpdate)
         {
@@ -129,28 +122,14 @@ namespace ECharts.Entities
 
         public T Data()
         {
-            if (data == null) {
-                data = new List<object>();
-            }
-            return this as T;
-        }
- 
-
-        public T SetData(IList<object> data) {
-            this.data = data;
+            if (data == null) data = new List<object>();
             return this as T;
         }
 
-        public T Data(params object[] values)
+
+        public T SetData(IList<object> data)
         {
-            if (values == null)
-            {
-                return default(T);
-            }
-            if (data == null) {
-                data = new List<object>();
-            }
-            data = values;
+            this.data = data;
             return this as T;
         }
     }

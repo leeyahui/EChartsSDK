@@ -1,14 +1,10 @@
-﻿using ECharts.Entities.feature;
+﻿using System.Collections.Generic;
+using ECharts.Entities.feature;
 using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities
 {
-    public class DataRange:Basic<DataRange>
+    public class DataRange : Basic<DataRange>
     {
         public OrientType? orient { get; set; }
 
@@ -49,6 +45,5 @@ namespace ECharts.Entities
             this.itemGap = itemGap;
             return this;
         }
-
     }
 }

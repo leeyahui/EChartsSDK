@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
-    public class CalendarLabel:StyleLabel
+    public class CalendarLabel : StyleLabel
     {
         public int? firstDay { get; set; }
 
@@ -18,11 +12,11 @@ namespace ECharts.Entities.style
             this.firstDay = firstDay;
             return this;
         }
+
         public CalendarLabel NameMap(string nameMap)
         {
             this.nameMap = nameMap;
             return this;
         }
-
     }
 }

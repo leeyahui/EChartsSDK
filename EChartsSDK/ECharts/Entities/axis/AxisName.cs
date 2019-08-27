@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
@@ -13,7 +8,7 @@ namespace ECharts.Entities.axis
 
         public object formatter { get; set; }
 
-        public TextStyle  textStyle { get; set; }
+        public TextStyle textStyle { get; set; }
 
         public AxisName Formatter(object formatter)
         {
@@ -24,7 +19,7 @@ namespace ECharts.Entities.axis
         public TextStyle TextStyle()
         {
             if (textStyle == null)
-                textStyle = new style.TextStyle();
+                textStyle = new TextStyle();
             return textStyle;
         }
 

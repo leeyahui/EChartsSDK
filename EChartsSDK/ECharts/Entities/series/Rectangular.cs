@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Rectangular<T> : ChartSeries<Rectangular<T>>
-		where T : class
+        where T : class
     {
         public string stack { get; set; }
 
@@ -23,7 +17,7 @@ namespace ECharts.Entities.series
 
         public object symbolSize { get; set; }
 
-        public double? symbolRotate { get; set; }        
+        public double? symbolRotate { get; set; }
 
         public bool? legendHoverLink { get; set; }
 
@@ -68,10 +62,10 @@ namespace ECharts.Entities.series
 
         public T Symbol(string icon)
         {
-            this.symbol = icon;
+            symbol = icon;
             return this as T;
         }
- 
+
 
         public T SymbolSize(object symbolSize)
         {
@@ -79,22 +73,18 @@ namespace ECharts.Entities.series
             return this as T;
         }
 
-		/// 
-		/// <param name="polorIndex"></param>
+        /// <param name="polorIndex"></param>
         public T PolorIndex(int polarIndex)
         {
             this.polarIndex = polarIndex;
-		return this as T; 
-		}
+            return this as T;
+        }
 
-		/// 
-		/// <param name="geoIndex"></param>
-		public T GeoIndex(int geoIndex){
-		     this.geoIndex=geoIndex;
-		return this as T; 
-		}
-
-        
-
+        /// <param name="geoIndex"></param>
+        public T GeoIndex(int geoIndex)
+        {
+            this.geoIndex = geoIndex;
+            return this as T;
+        }
     }
 }

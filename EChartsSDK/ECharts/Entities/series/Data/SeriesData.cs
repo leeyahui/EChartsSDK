@@ -1,14 +1,9 @@
-﻿using ECharts.Entities.data;
-using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities.series.data
 {
-
     public class SeriesData<T>
     {
         public T value { get; set; }
@@ -29,39 +24,11 @@ namespace ECharts.Entities.series.data
 
         public StyleLabel label { get; set; }
 
-        #region constructor
-        public SeriesData(T value):this(value,null,null)
-        {         
-            
-        }
-
-        public SeriesData(T value, string name):this(value) {
-            this.name = name;
-        }
-
-        public SeriesData(T value,ToolTip tooltip):this(value,tooltip,null)
-        {
-             
-        }
-
-        public SeriesData(T value, ItemStyle itemStyle) :this(value, null, itemStyle)
-        {
-
-        }
-
-        public SeriesData(T value, ToolTip tooltip, ItemStyle itemStyle)
-        {
-            this.value = value;
-            this.tooltip = tooltip;
-            this.itemStyle = itemStyle;           
-        }
-        #endregion
-
         public StyleLabel Label()
         {
-            if (this.label == null)
-                this.label = new style.StyleLabel();
-            return this.label;
+            if (label == null)
+                label = new StyleLabel();
+            return label;
         }
 
         public SeriesData<T> SymbolRotate(int symbolRotate)
@@ -88,11 +55,10 @@ namespace ECharts.Entities.series.data
             return this;
         }
 
-        public SeriesData<T> Children(params SeriesData<T>[] values) {
-            if (values == null) {
-                return this;
-            }
-            this.children = values.ToList();
+        public SeriesData<T> Children(params SeriesData<T>[] values)
+        {
+            if (values == null) return this;
+            children = values.ToList();
             return this;
         }
 
@@ -100,15 +66,43 @@ namespace ECharts.Entities.series.data
         public ToolTip ToolTip()
         {
             if (tooltip == null)
-                this.tooltip = new Entities.ToolTip();
-            return this.tooltip;
+                tooltip = new ToolTip();
+            return tooltip;
         }
 
         public ItemStyle ItemStyle()
         {
             if (itemStyle == null)
-                this.itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
+
+        #region constructor
+
+        public SeriesData(T value) : this(value, null, null)
+        {
+        }
+
+        public SeriesData(T value, string name) : this(value)
+        {
+            this.name = name;
+        }
+
+        public SeriesData(T value, ToolTip tooltip) : this(value, tooltip, null)
+        {
+        }
+
+        public SeriesData(T value, ItemStyle itemStyle) : this(value, null, itemStyle)
+        {
+        }
+
+        public SeriesData(T value, ToolTip tooltip, ItemStyle itemStyle)
+        {
+            this.value = value;
+            this.tooltip = tooltip;
+            this.itemStyle = itemStyle;
+        }
+
+        #endregion
     }
 }

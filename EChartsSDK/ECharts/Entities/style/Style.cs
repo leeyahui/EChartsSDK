@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public abstract class Style<T>
-		where T : class
+        where T : class
     {
         public bool? show { get; set; }
 
@@ -28,7 +21,7 @@ namespace ECharts.Entities.style
 
         public TextStyle textStyle { get; set; }
 
-        public object borderColor { get; set; }      
+        public object borderColor { get; set; }
 
         public double? borderWidth { get; set; }
 
@@ -38,7 +31,7 @@ namespace ECharts.Entities.style
 
         public int? barBorderWidth { get; set; }
 
-        public  string brushType { get; set; }
+        public string brushType { get; set; }
 
         public object position { get; set; }
 
@@ -82,7 +75,7 @@ namespace ECharts.Entities.style
             return this as T;
         }
 
-          public T BrushType(string brushType)
+        public T BrushType(string brushType)
         {
             this.brushType = brushType;
             return this as T;
@@ -107,7 +100,6 @@ namespace ECharts.Entities.style
             return this as T;
         }
 
-       
 
         public T BarBorderWidth(int barBorderWidth)
         {
@@ -134,7 +126,8 @@ namespace ECharts.Entities.style
         }
 
 
-        public T Color(object color) {
+        public T Color(object color)
+        {
             this.color = color;
             return this as T;
         }
@@ -154,37 +147,37 @@ namespace ECharts.Entities.style
         public StyleLabel Label()
         {
             if (label == null)
-                this.label = new style.StyleLabel();
-            return this.label;
+                label = new StyleLabel();
+            return label;
         }
 
         public LabelLine LabelLine()
         {
             if (labelLine == null)
-                this.labelLine = new style.LabelLine();
-            return this.labelLine;
+                labelLine = new LabelLine();
+            return labelLine;
         }
 
         public NodeStyle NodeStyle()
-        {            
+        {
             if (nodeStyle == null)
-                this.nodeStyle = new style.NodeStyle();
-            return this.nodeStyle;
+                nodeStyle = new NodeStyle();
+            return nodeStyle;
         }
 
         public TextStyle TextStyle()
         {
             if (textStyle == null)
-                this.textStyle = new style.TextStyle();
-            return this.textStyle;
+                textStyle = new TextStyle();
+            return textStyle;
         }
 
 
         public LineStyle LineStyle()
         {
             if (lineStyle == null)
-                this.lineStyle = new LineStyle();
-            return this.lineStyle;
+                lineStyle = new LineStyle();
+            return lineStyle;
         }
 
         public T SetLineStyle(LineStyle lineStyle)
@@ -195,45 +188,45 @@ namespace ECharts.Entities.style
 
         public AreaStyle AreaStyle()
         {
-            if (areaStyle == null) 
-                this.areaStyle = new AreaStyle();
+            if (areaStyle == null)
+                areaStyle = new AreaStyle();
             return areaStyle;
         }
 
         public ChordStyle ChordStyle()
         {
-            if (chordStyle == null) 
-                this.chordStyle = new ChordStyle();
+            if (chordStyle == null)
+                chordStyle = new ChordStyle();
             return chordStyle;
         }
 
         public LinkStyle LinkStyle()
         {
             if (linkStyle == null)
-                this.linkStyle = new LinkStyle();
+                linkStyle = new LinkStyle();
             return linkStyle;
         }
 
-		/// 
-		/// <param name="shadowBlur"></param>
-		public T ShadowBlur(int shadowBlur){
-		     this.shadowBlur=shadowBlur;
-		return this as T; 
-		}
+        /// <param name="shadowBlur"></param>
+        public T ShadowBlur(int shadowBlur)
+        {
+            this.shadowBlur = shadowBlur;
+            return this as T;
+        }
 
-		/// 
-		/// <param name="shadowColor"></param>
-		public T ShadowColor(string shadowColor){
-		     this.shadowColor=shadowColor;
-		return this as T; 
-		}
+        /// <param name="shadowColor"></param>
+        public T ShadowColor(string shadowColor)
+        {
+            this.shadowColor = shadowColor;
+            return this as T;
+        }
 
-		/// 
-		/// <param name="shadowOffsetY"></param>
-		public T ShadowOffsetY(int shadowOffsetY){
-		     this.shadowOffsetY=shadowOffsetY;
-		return this as T; 
-		}
+        /// <param name="shadowOffsetY"></param>
+        public T ShadowOffsetY(int shadowOffsetY)
+        {
+            this.shadowOffsetY = shadowOffsetY;
+            return this as T;
+        }
 
         public T ShadowOffsetX(int shadowOffsetX)
         {
@@ -242,26 +235,26 @@ namespace ECharts.Entities.style
         }
 
 
-		/// 
-		/// <param name="show"></param>
-		public T Show(bool show){
-		     this.show=show;
-		return this as T; 
-		}
+        /// <param name="show"></param>
+        public T Show(bool show)
+        {
+            this.show = show;
+            return this as T;
+        }
 
-		/// 
-		/// <param name="position"></param>
-		public T Position(StyleLabelTyle position){
-		     this.position=position;
-		return this as T; 
-		}
+        /// <param name="position"></param>
+        public T Position(StyleLabelTyle position)
+        {
+            this.position = position;
+            return this as T;
+        }
 
-		/// 
-		/// <param name="formatter"></param>
-		public T Formatter(object formatter){
-		     this.formatter=formatter;
-		return this as T; 
-		}
+        /// <param name="formatter"></param>
+        public T Formatter(object formatter)
+        {
+            this.formatter = formatter;
+            return this as T;
+        }
 
 
         public T Offset(double[] offset)
@@ -281,6 +274,5 @@ namespace ECharts.Entities.style
             this.opacity = opacity;
             return this as T;
         }
-
     }
 }

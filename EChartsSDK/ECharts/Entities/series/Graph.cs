@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Graph : ChartSeries<Graph>
     {
+        public Graph()
+        {
+            type = ChartType.graph;
+        }
+
         public string layout { get; set; }
 
         public object links { get; set; }
 
         public object categories { get; set; }
+
+        public graph.Force force { get; set; }
 
         public Graph Categories(object categories)
         {
@@ -31,20 +32,12 @@ namespace ECharts.Entities.series
             this.layout = layout;
             return this;
         }
-         
-        public graph.Force force { get; set; }
-
-        public Graph()
-        {
-            this.type = ChartType.graph;            
-        }
 
         public graph.Force Force()
-        {         
-            if(this.force==null)
-                this.force = new graph.Force();
-            return this.force;
+        {
+            if (force == null)
+                force = new graph.Force();
+            return force;
         }
-
     }
 }

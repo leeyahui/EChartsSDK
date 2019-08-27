@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class NodeStyle
     {
@@ -25,7 +19,7 @@ namespace ECharts.Entities.style
 
         public NodeStyle BrushType(object brushType)
         {
-            this.brushType = brushType;            
+            this.brushType = brushType;
             return this;
         }
 
@@ -41,5 +35,4 @@ namespace ECharts.Entities.style
             return this;
         }
     }
-
 }

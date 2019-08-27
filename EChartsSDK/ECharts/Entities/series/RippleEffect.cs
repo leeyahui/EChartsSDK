@@ -6,54 +6,35 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+namespace ECharts.Entities.series
+{
+    public class RippleEffect
+    {
+        public int? period { get; set; }
 
+        public double? scale { get; set; }
 
+        public BrushType brushType { get; set; }
 
-namespace ECharts.Entities.series {
-	public class RippleEffect {
+        /// <param name="period"></param>
+        public RippleEffect Period(int period)
+        {
+            this.period = period;
+            return this;
+        }
 
-		 
-		public int? period{
-			get;
-			set;
-		}
+        /// <param name="scale"></param>
+        public RippleEffect Scale(double scale)
+        {
+            this.scale = scale;
+            return this;
+        }
 
-		public double? scale{
-			get;
-			set;
-		}
-
-		public BrushType brushType{
-			get;
-			set;
-		}
-
-		/// 
-		/// <param name="period"></param>
-		public RippleEffect Period(int period){
-		     this.period=period;
-		return this; 
-		}
-
-		/// 
-		/// <param name="scale"></param>
-		public RippleEffect Scale(double scale){
-		     this.scale=scale;
-		return this; 
-		}
-
-		/// 
-		/// <param name="brushType"></param>
+        /// <param name="brushType"></param>
         public RippleEffect BrushType(BrushType brushType)
         {
-		     this.brushType=brushType;
-		return this; 
-		}
-
-	}//end RippleEffect
-
-}//end namespace series
+            this.brushType = brushType;
+            return this;
+        }
+    } //end RippleEffect
+} //end namespace series

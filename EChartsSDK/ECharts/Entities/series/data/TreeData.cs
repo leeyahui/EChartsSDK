@@ -1,9 +1,5 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities.series.data
 {
@@ -24,8 +20,8 @@ namespace ECharts.Entities.series.data
         public ItemStyle ItemStyle()
         {
             if (itemStyle == null)
-                this.itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
 
         public TreeData SymbolSize(object symbolSize)
@@ -51,7 +47,5 @@ namespace ECharts.Entities.series.data
             this.value = value;
             return this;
         }
-
-
     }
 }

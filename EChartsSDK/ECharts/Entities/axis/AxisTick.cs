@@ -1,10 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
@@ -21,7 +15,7 @@ namespace ECharts.Entities.axis
         public bool? inside { get; set; }
 
         public int? length { get; set; }
-        
+
         public LineStyle lineStyle { get; set; }
 
         public bool? alignWithLabel { get; set; }
@@ -59,9 +53,9 @@ namespace ECharts.Entities.axis
 
         public LineStyle LineStyle()
         {
-            if (this.lineStyle == null)
-                this.lineStyle = new style.LineStyle();
-            return this.lineStyle;
+            if (lineStyle == null)
+                lineStyle = new LineStyle();
+            return lineStyle;
         }
 
         public AxisTick Show(bool show)
@@ -75,9 +69,5 @@ namespace ECharts.Entities.axis
             this.interval = interval;
             return this;
         }
-
-
-      
-
     }
 }

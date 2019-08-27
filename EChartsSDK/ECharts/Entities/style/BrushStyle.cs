@@ -6,65 +6,44 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+namespace ECharts.Entities.style
+{
+    public class BrushStyle
+    {
+        public int? borderWidth { get; set; }
 
+        public object color { get; set; }
 
+        public object borderColor { get; set; }
 
-namespace ECharts.Entities.style {
-	public class BrushStyle {
+        public int? width { get; set; }
 
-	 
-		public int? borderWidth{
-			get;
-			set;
-		}
+        /// <param name="borderWidth"></param>
+        public BrushStyle BorderWidth(int borderWidth)
+        {
+            this.borderWidth = borderWidth;
+            return this;
+        }
 
-		public object color{
-			get;
-			set;
-		}
+        /// <param name="color"></param>
+        public BrushStyle Color(string color)
+        {
+            this.color = color;
+            return this;
+        }
 
-		public object borderColor{
-			get;
-			set;
-		}
+        /// <param name="borderColor"></param>
+        public BrushStyle BorderColor(string borderColor)
+        {
+            this.borderColor = borderColor;
+            return this;
+        }
 
-		public int? width{
-			get;
-			set;
-		}
-
-		/// 
-		/// <param name="borderWidth"></param>
-		public BrushStyle BorderWidth(int borderWidth){
-		     this.borderWidth=borderWidth;
-		return this; 
-		}
-
-		/// 
-		/// <param name="color"></param>
-		public BrushStyle Color(string color){
-		     this.color=color;
-		return this; 
-		}
-
-		/// 
-		/// <param name="borderColor"></param>
-		public BrushStyle BorderColor(string borderColor){
-		     this.borderColor=borderColor;
-		return this; 
-		}
-
-		/// 
-		/// <param name="width"></param>
-		public BrushStyle Width(int width){
-		     this.width=width;
-		return this; 
-		}
-
-	}//end BrushStyle
-
-}//end namespace style
+        /// <param name="width"></param>
+        public BrushStyle Width(int width)
+        {
+            this.width = width;
+            return this;
+        }
+    } //end BrushStyle
+} //end namespace style

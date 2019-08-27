@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class LineStyle
     {
@@ -51,14 +45,12 @@ namespace ECharts.Entities.style
         }
 
 
-
         public LineStyle Color(object color)
         {
             this.color = color;
             return this;
         }
 
-    
 
         public LineStyle Color0(string color0)
         {

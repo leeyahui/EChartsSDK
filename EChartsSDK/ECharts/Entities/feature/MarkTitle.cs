@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.feature
+﻿namespace ECharts.Entities.feature
 {
     public class MarkTitle
     {
@@ -33,5 +27,4 @@ namespace ECharts.Entities.feature
             return this;
         }
     }
-
 }

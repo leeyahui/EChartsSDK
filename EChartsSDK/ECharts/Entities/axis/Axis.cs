@@ -1,13 +1,7 @@
 using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
-
     public abstract class Axis : AbstractData<Axis>
     {
         public TextStyle nameTextStyle { get; set; }
@@ -24,8 +18,23 @@ namespace ECharts.Entities.axis
 
         public AxisPointer axisPointer { get; set; }
 
+        public string name { get; set; }
 
-        public ECharts.Entities.style.TextStyle NameTextStyle()
+        public object position { get; set; }
+
+        public int zlevel { get; set; }
+
+        public int? gridIndex { get; set; }
+
+        public int? nameGap { get; set; }
+
+        public bool? inverse { get; set; }
+
+
+        public bool scale { get; set; }
+
+
+        public TextStyle NameTextStyle()
         {
             nameTextStyle = new TextStyle();
             return nameTextStyle;
@@ -67,93 +76,47 @@ namespace ECharts.Entities.axis
             return splitArea;
         }
 
-		public string name{
-			get;
-			set;
-		}
+        /// <param name="name"></param>
+        public Axis Name(string name)
+        {
+            this.name = name;
+            return this;
+        }
 
-		public object position{
-			get;
-			set;
-		}
+        /// <param name="zlevel"></param>
+        public Axis zLevel(int zlevel)
+        {
+            this.zlevel = zlevel;
+            return this;
+        }
 
-		public int zlevel{
-			get;
-			set;
-		}
+        /// <param name="gridIndex"></param>
+        public Axis GridIndex(int gridIndex)
+        {
+            this.gridIndex = gridIndex;
+            return this;
+        }
 
-		public int? gridIndex{
-			get;
-			set;
-		}
+        /// <param name="nameGap"></param>
+        public Axis NameGap(int nameGap)
+        {
+            this.nameGap = nameGap;
+            return this;
+        }
 
-		public int? nameGap{
-			get;
-			set;
-		}
+        /// <param name="inverse"></param>
+        public Axis Inverse(bool inverse)
+        {
+            this.inverse = inverse;
+            return this;
+        }
 
-		public bool? inverse{
-			get;
-			set;
-		}
 
-	 
-	 
-
-		public bool scale{
-			get;
-			set;
-		}
-
-		/// 
-		/// <param name="name"></param>
-		public Axis Name(string name){
-		     this.name=name;
-		return this; 
-		}
-
-		/// 
-		/// <param name="zlevel"></param>
-		public Axis zLevel(int zlevel){
-		     this.zlevel=zlevel;
-		return this; 
-		}
-
-		/// 
-		/// <param name="gridIndex"></param>
-		public Axis GridIndex(int gridIndex){
-		     this.gridIndex=gridIndex;
-		return this; 
-		}
-
-		/// 
-		/// <param name="nameGap"></param>
-		public Axis NameGap(int nameGap){
-		     this.nameGap=nameGap;
-		return this; 
-		}
-
-		/// 
-		/// <param name="inverse"></param>
-		public Axis Inverse(bool inverse){
-		     this.inverse=inverse;
-		return this; 
-		}
-
-	 
-
-	 
-
-		
-
-		/// 
-		/// <param name="scale"></param>
-		public Axis Scale(bool scale){
-		     this.scale=scale;
-		return this; 
-		}
-
-		 
-
+        /// <param name="scale"></param>
+        public Axis Scale(bool scale)
+        {
+            this.scale = scale;
+            return this;
+        }
     }
 }

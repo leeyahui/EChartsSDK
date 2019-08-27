@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Bar : Rectangular<Bar>
     {
+        public Bar()
+        {
+            type = ChartType.bar;
+        }
+
+        public Bar(string name) : this()
+        {
+            this.name = name;
+        }
+
         public object barGap { get; set; }
 
         public object barCategoryGap { get; set; }
@@ -43,20 +47,12 @@ namespace ECharts.Entities.series
             this.barCategoryGap = barCategoryGap;
             return this;
         }
-         
+
 
         public Bar BarGap(object barGap)
         {
             this.barGap = barGap;
             return this;
-        }
-
-        public Bar() {
-            this.type = ChartType.bar;
-        }
-
-        public Bar(string name) : this() {
-            this.name = name;
         }
     }
 }

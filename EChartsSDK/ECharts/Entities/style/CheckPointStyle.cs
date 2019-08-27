@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class CheckPointStyle
     {
@@ -23,8 +17,8 @@ namespace ECharts.Entities.style
         public StyleLabel Label()
         {
             if (label == null)
-                this.label = new style.StyleLabel();
-            return this.label;
+                label = new StyleLabel();
+            return label;
         }
 
         public CheckPointStyle BorderWidth(string borderWidth)
@@ -56,7 +50,5 @@ namespace ECharts.Entities.style
             this.symbol = symbol;
             return this;
         }
-
-
     }
 }

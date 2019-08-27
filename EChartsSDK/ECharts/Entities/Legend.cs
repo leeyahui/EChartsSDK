@@ -1,18 +1,15 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities
 {
     public class Legend : Basic<Legend>, IData<Legend>
-    {      
+    {
         public OrientType? orient { get; set; }
 
         public HorizontalType? align { get; set; }
-       
+
         public object itemGap { get; set; }
 
         public int? itemWidth { get; set; }
@@ -29,6 +26,14 @@ namespace ECharts.Entities
 
         public object data { get; set; }
 
+
+        public Legend Data(params object[] values)
+        {
+            if (data == null) data = new List<object>();
+            data = values.ToList();
+            return this;
+        }
+
         public Legend SetSelected(Dictionary<string, bool> selected)
         {
             this.selected = selected;
@@ -38,8 +43,8 @@ namespace ECharts.Entities
         public TextStyle TextStyle()
         {
             if (textStyle == null)
-                textStyle = new style.TextStyle();
-            return this.textStyle;
+                textStyle = new TextStyle();
+            return textStyle;
         }
 
         public Legend SelectedMode(object selectedMode)
@@ -102,33 +107,17 @@ namespace ECharts.Entities
             this.align = align;
             return this;
         }
-        
-
-        public Legend Data(params object[] values)
-        {
-            if (data == null) {
-                data = new List<object>();
-            }
-            data = values.ToList();
-            return this;
-        }
 
         public Legend Data(params IconStyle[] values)
         {
-            if (data == null)
-            {
-                data = new List<object>();
-            }
+            if (data == null) data = new List<object>();
             data = values.ToList();
             return this;
         }
 
         public Legend Data(object data)
         {
-            if (this.data == null)
-            {
-                this.data = new List<object>();
-            }
+            if (this.data == null) this.data = new List<object>();
             this.data = data;
             return this;
         }

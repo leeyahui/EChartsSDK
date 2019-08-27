@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.axis
+﻿namespace ECharts.Entities.axis
 {
-    public class ParallelAxis:ChartAxis<ParallelAxis>
+    public class ParallelAxis : ChartAxis<ParallelAxis>
     {
         public int? dim { get; set; }
 
@@ -20,7 +14,7 @@ namespace ECharts.Entities.axis
 
         public ParallelAxis Name(string Name)
         {
-            this.name = name;
+            name = name;
             return this;
         }
     }

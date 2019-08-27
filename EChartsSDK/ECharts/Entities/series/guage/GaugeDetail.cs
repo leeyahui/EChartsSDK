@@ -1,9 +1,5 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities
 {
@@ -45,8 +41,8 @@ namespace ECharts.Entities
 
         public TextStyle TextStyle()
         {
-            if (this.textStyle == null)
-                textStyle = new style.TextStyle();
+            if (textStyle == null)
+                textStyle = new TextStyle();
             return textStyle;
         }
 
@@ -97,8 +93,5 @@ namespace ECharts.Entities
             this.offsetCenter = offsetCenter;
             return this;
         }
-
-        
-
     }
 }

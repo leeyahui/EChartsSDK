@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class Radar : ChartSeries<Radar>
     {
+        public Radar()
+        {
+            type = ChartType.radar;
+        }
+
+        public Radar(string name) : this()
+        {
+            this.name = name;
+        }
+
         public int? polarIndex { get; set; }
 
         public string symbol { get; set; }
@@ -53,17 +60,8 @@ namespace ECharts.Entities.series
 
         public Radar Indicator(params IndicatorData[] values)
         {
-            this.indicator = values.ToList();
+            indicator = values.ToList();
             return this;
-        }
-
-
-        public Radar() {
-            this.type = ChartType.radar;
-        }
-
-        public Radar(string name) : this() {
-            this.name = name;
         }
     }
 }

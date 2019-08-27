@@ -1,65 +1,58 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities
 {
-	/// <summary>
-	/// �����ļ�
-	/// </summary>
+    /// <summary>
+    ///     �����ļ�
+    /// </summary>
     public class Title : Basic<Title>
     {
-
-	   
-
         #region properties       
+
         public string id { get; set; }
         public object text { get; set; }
 
         public string link { get; set; }
 
-        public TargetType? target { get; set; }        
+        public TargetType? target { get; set; }
 
         public string subtext { get; set; }
 
         public string sublink { get; set; }
 
         public TargetType? subtarget { get; set; }
-       
+
         public HorizontalType? textAlign { get; set; }
 
         public HorizontalType? align { get; set; }
 
         public int? itemGap { get; set; }
 
-        public TextStyle textStyle { get; set; } 
+        public TextStyle textStyle { get; set; }
 
         public TextStyle subtextStyle { get; set; }
+
         #endregion
 
         #region method
 
-	    public Title Id(string id)
-	    {
-	        this.id = id;
-	        return this;
-	    }
-
-	    public ECharts.Entities.style.TextStyle TextStyle()
+        public Title Id(string id)
         {
-            if (this.textStyle == null)
-                textStyle = new style.TextStyle();
+            this.id = id;
+            return this;
+        }
+
+        public TextStyle TextStyle()
+        {
+            if (textStyle == null)
+                textStyle = new TextStyle();
             return textStyle;
         }
 
-        public ECharts.Entities.style.TextStyle SubtextStyle()
+        public TextStyle SubtextStyle()
         {
-            if (this.subtextStyle == null)
-                subtextStyle = new style.TextStyle();
+            if (subtextStyle == null)
+                subtextStyle = new TextStyle();
             return subtextStyle;
         }
 
@@ -80,6 +73,7 @@ namespace ECharts.Entities
             this.textAlign = textAlign;
             return this;
         }
+
         public Title Align(HorizontalType align)
         {
             this.align = align;
@@ -117,7 +111,8 @@ namespace ECharts.Entities
             return this;
         }
 
-        public Title Text(string text) {
+        public Title Text(string text)
+        {
             this.text = text;
             return this;
         }
@@ -134,9 +129,6 @@ namespace ECharts.Entities
             return this;
         }
 
-		 
-
-      
         #endregion
     }
 }

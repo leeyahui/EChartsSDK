@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class PiecesStyle
     {
         public int? min { get; set; }
         public int? max { get; set; }
 
-        public string  label { get; set; }
+        public string label { get; set; }
 
         public int? value { get; set; }
 
@@ -64,12 +58,11 @@ namespace ECharts.Entities.style
             this.min = min;
             return this;
         }
+
         public PiecesStyle Max(int max)
         {
             this.max = max;
             return this;
         }
-
-        
     }
 }

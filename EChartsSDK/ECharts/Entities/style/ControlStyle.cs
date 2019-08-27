@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class ControlStyle
     {
-
         public bool? showNextBtn { get; set; }
 
         public bool? showPrevBtn { get; set; }
@@ -25,15 +18,15 @@ namespace ECharts.Entities.style
         public Emphasis Emphasis()
         {
             if (empasis == null)
-                this.empasis = new Emphasis();
-            return this.empasis;
+                empasis = new Emphasis();
+            return empasis;
         }
 
         public Normal Normal()
         {
             if (normal == null)
-                this.normal = new Normal();
-            return this.normal;
+                normal = new Normal();
+            return normal;
         }
 
         public ControlStyle ItemGap(int itemGap)
@@ -53,9 +46,5 @@ namespace ECharts.Entities.style
             this.showPrevBtn = showPrevBtn;
             return this;
         }
-
-        
-
-
     }
 }

@@ -1,34 +1,10 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities.series.data
 {
     public class RadarData
     {
-        public object value { get; set; }
-        public string name { get; set; }
-
-        public object symbol { get; set; }
-
-        public object symbolSize { get; set; }
-
-
-
-        public ItemStyle itemStyle { get; set; }
-
-        public ItemStyle ItemStyle()
-        {
-            if (this.itemStyle == null)
-            {
-                itemStyle = new style.ItemStyle();
-            }
-            return itemStyle;
-        }
-
         public RadarData(string name)
         {
             this.name = name;
@@ -40,16 +16,32 @@ namespace ECharts.Entities.series.data
             this.name = name;
         }
 
-        public RadarData(object value, string name, ItemStyle itemStyle):this(value,name)
+        public RadarData(object value, string name, ItemStyle itemStyle) : this(value, name)
         {
             this.itemStyle = itemStyle;
+        }
+
+        public object value { get; set; }
+        public string name { get; set; }
+
+        public object symbol { get; set; }
+
+        public object symbolSize { get; set; }
+
+
+        public ItemStyle itemStyle { get; set; }
+
+        public ItemStyle ItemStyle()
+        {
+            if (itemStyle == null) itemStyle = new ItemStyle();
+            return itemStyle;
         }
 
         public RadarData Value(params object[] values)
         {
             if (values == null)
                 return this;
-            this.value = values.ToList();
+            value = values.ToList();
             return this;
         }
 

@@ -1,15 +1,9 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
-using ECharts.Entities.series.mark;
+﻿using ECharts.Entities.series.mark;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities.series
 {
-    public abstract class Series 
+    public abstract class Series
     {
         public string coordinateSystem { get; set; }
 
@@ -21,7 +15,7 @@ namespace ECharts.Entities.series
 
         public ChartType type { get; set; }
 
-        public string name { get; set; }        
+        public string name { get; set; }
 
         public ToolTip tooltip { get; set; }
 
@@ -78,9 +72,9 @@ namespace ECharts.Entities.series
 
         public EntityStyle<AreaStyle> AreaStyle()
         {
-            if(this.areaStyle == null)
-                this.areaStyle = new EntityStyle<AreaStyle>();
-            return this.areaStyle;
+            if (areaStyle == null)
+                areaStyle = new EntityStyle<AreaStyle>();
+            return areaStyle;
         }
 
         public Series CoordinateSystem(string coordinateSystem)
@@ -91,7 +85,7 @@ namespace ECharts.Entities.series
 
         public Series Name(string name)
         {
-            this.type = type;
+            type = type;
             return this;
         }
 
@@ -121,17 +115,17 @@ namespace ECharts.Entities.series
             return this;
         }
 
-        public ECharts.Entities.style.ItemStyle ItemStyle()
+        public ItemStyle ItemStyle()
         {
-            if (this.itemStyle == null)
-                this.itemStyle = new style.ItemStyle();
+            if (itemStyle == null)
+                itemStyle = new ItemStyle();
             return itemStyle;
         }
 
         public ItemStyle LineStyle()
         {
-            if (this.lineStyle == null)
-                this.lineStyle = new style.ItemStyle();
+            if (lineStyle == null)
+                lineStyle = new ItemStyle();
             return lineStyle;
         }
 
@@ -144,83 +138,81 @@ namespace ECharts.Entities.series
 
         public MarkLine MarkLine()
         {
-            if (this.markLine == null)
-                this.markLine = new series.MarkLine();
-            return this.markLine;
+            if (markLine == null)
+                markLine = new MarkLine();
+            return markLine;
         }
 
         public MarkArea MarkArea()
         {
-            if (this.markArea == null)
-                this.markArea = new MarkArea();
-            return this.markArea;
+            if (markArea == null)
+                markArea = new MarkArea();
+            return markArea;
         }
 
 
-
-        public ECharts.Entities.ToolTip ToolTip()
+        public ToolTip ToolTip()
         {
-            if (this.tooltip == null)
-                this.tooltip = new ToolTip();
-            return this.tooltip;
+            if (tooltip == null)
+                tooltip = new ToolTip();
+            return tooltip;
         }
 
         public MarkPoint MarkPoint()
         {
-            if (this.markPoint == null)
-                this.markPoint = new series.MarkPoint();
-            return this.markPoint;
+            if (markPoint == null)
+                markPoint = new MarkPoint();
+            return markPoint;
         }
 
         public ItemStyle Label()
         {
-            if (this.label == null)
-                this.label = new ItemStyle();
-            return this.label;
+            if (label == null)
+                label = new ItemStyle();
+            return label;
         }
 
-		/// 
-		/// <param name="slient"></param>
+        /// <param name="slient"></param>
         public Series Silent(bool silent)
         {
             this.silent = silent;
-		return this; 
-		}
+            return this;
+        }
 
-		/// 
-		/// <param name="animation"></param>
-		public Series Animation(bool animation){
-		     this.animation=animation;
-		return this; 
-		}
+        /// <param name="animation"></param>
+        public Series Animation(bool animation)
+        {
+            this.animation = animation;
+            return this;
+        }
 
-		/// 
-		/// <param name="animationThreshold"></param>
-		public Series AnimationThreshold(int animationThreshold){
-		     this.animationThreshold=animationThreshold;
-		return this; 
-		}
+        /// <param name="animationThreshold"></param>
+        public Series AnimationThreshold(int animationThreshold)
+        {
+            this.animationThreshold = animationThreshold;
+            return this;
+        }
 
-		/// 
-		/// <param name="animationDuration"></param>
-		public Series AnimationDuration(int animationDuration){
-		     this.animationDuration=animationDuration;
-		return this; 
-		}
+        /// <param name="animationDuration"></param>
+        public Series AnimationDuration(int animationDuration)
+        {
+            this.animationDuration = animationDuration;
+            return this;
+        }
 
-		/// 
-		/// <param name="animationEasing"></param>
-		public Series AnimationEasing(string animationEasing){
-		     this.animationEasing=animationEasing;
-		return this; 
-		}
+        /// <param name="animationEasing"></param>
+        public Series AnimationEasing(string animationEasing)
+        {
+            this.animationEasing = animationEasing;
+            return this;
+        }
 
-		/// 
-		/// <param name="animationDelay"></param>
-		public Series AnimationDelay(int animationDelay){
-		     this.animationDelay=animationDelay;
-		return this; 
-		}
+        /// <param name="animationDelay"></param>
+        public Series AnimationDelay(int animationDelay)
+        {
+            this.animationDelay = animationDelay;
+            return this;
+        }
 
         public Series AnimationDelay(object animationDelay)
         {
@@ -228,26 +220,26 @@ namespace ECharts.Entities.series
             return this;
         }
 
-		/// 
-		/// <param name="animationDurationUpdate"></param>
-		public Series AnimationDurationUpdate(int animationDurationUpdate){
-		     this.animationDurationUpdate=animationDurationUpdate;
-		return this; 
-		}
+        /// <param name="animationDurationUpdate"></param>
+        public Series AnimationDurationUpdate(int animationDurationUpdate)
+        {
+            this.animationDurationUpdate = animationDurationUpdate;
+            return this;
+        }
 
-		/// 
-		/// <param name="animationEasingUpdate"></param>
-		public Series AnimationEasingUpdate(string animationEasingUpdate){
-		     this.animationEasingUpdate=animationEasingUpdate;
-		return this; 
-		}
+        /// <param name="animationEasingUpdate"></param>
+        public Series AnimationEasingUpdate(string animationEasingUpdate)
+        {
+            this.animationEasingUpdate = animationEasingUpdate;
+            return this;
+        }
 
-		/// 
-		/// <param name="animationDelayUpdate"></param>
-		public Series AnimationDelayUpdate(int animationDelayUpdate){
-		     this.animationDelayUpdate=animationDelayUpdate;
-		return this; 
-		}
+        /// <param name="animationDelayUpdate"></param>
+        public Series AnimationDelayUpdate(int animationDelayUpdate)
+        {
+            this.animationDelayUpdate = animationDelayUpdate;
+            return this;
+        }
 
         public Series BlendMode(string blendMode)
         {
@@ -255,9 +247,4 @@ namespace ECharts.Entities.series
             return this;
         }
     }
-
-
-   
-
-
 }

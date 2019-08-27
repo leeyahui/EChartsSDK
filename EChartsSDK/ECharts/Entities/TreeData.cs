@@ -1,9 +1,5 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities
 {
@@ -23,9 +19,9 @@ namespace ECharts.Entities
 
         public ItemStyle ItemStyle()
         {
-            if (this.itemStyle == null)
-                itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+            if (itemStyle == null)
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
 
         public TreeData Value(int value)
@@ -51,6 +47,5 @@ namespace ECharts.Entities
             this.name = name;
             return this;
         }
-
     }
 }

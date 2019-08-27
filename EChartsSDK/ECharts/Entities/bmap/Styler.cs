@@ -6,43 +6,26 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+namespace ECharts.Entities.bmap
+{
+    public class Styler
+    {
+        public string color { get; set; }
 
+        public VisibilityType? visibility { get; set; }
 
+        /// <param name="color"></param>
+        public Styler Color(string color)
+        {
+            this.color = color;
+            return this;
+        }
 
-namespace ECharts.Entities.bmap {
-	public class Styler {
-
-		 
-
-		public string color{
-			get;
-			set;
-		}
-
-		public VisibilityType? visibility{
-			get;
-			set;
-		}
-
-		/// 
-		/// <param name="color"></param>
-		public Styler Color(string color){
-		     this.color=color;
-		return this; 
-		}
-
-		/// 
-		/// <param name="visibility"></param>
+        /// <param name="visibility"></param>
         public Styler Visibility(VisibilityType visibility)
         {
-		     this.visibility=visibility;
-		return this; 
-		}
-
-	}//end Styler
-
-}//end namespace bmap
+            this.visibility = visibility;
+            return this;
+        }
+    } //end Styler
+} //end namespace bmap

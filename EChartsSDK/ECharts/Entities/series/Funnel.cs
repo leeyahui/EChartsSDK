@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Funnel : ChartSeries<Funnel>
     {
+        public Funnel()
+        {
+            type = ChartType.funnel;
+        }
+
+        public Funnel(string name) : this()
+        {
+            this.name = name;
+        }
+
         public object x { get; set; }
 
         public object y { get; set; }
@@ -127,18 +131,6 @@ namespace ECharts.Entities.series
         {
             this.x2 = x2;
             return this;
-        }
-
-
-
-
-        public Funnel()
-        {
-            this.type = ChartType.funnel;
-        }
-
-        public Funnel(string name):this() {
-            this.name = name;
         }
     }
 }

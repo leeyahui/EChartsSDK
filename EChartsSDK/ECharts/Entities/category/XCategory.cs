@@ -1,9 +1,4 @@
 using ECharts.Entities.axis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.category
 {
@@ -19,16 +14,15 @@ namespace ECharts.Entities.category
 
         public SplitArea splitArea { get; set; }
 
-        public ECharts.Entities.axis.AxisLabel AxisLabel()
+        public AxisLabel AxisLabel()
         {
             axisLabel = new AxisLabel();
             return axisLabel;
         }
-
     }
 
     public class Category<T> : XCategory
-		where T : class
+        where T : class
     {
         public string name { get; set; }
 
@@ -46,10 +40,8 @@ namespace ECharts.Entities.category
 
     public class ValueCategory : Category<ValueCategory>
     {
-
         public string name2 { get; set; }
 
         public string postiton2 { get; set; }
-
     }
 }

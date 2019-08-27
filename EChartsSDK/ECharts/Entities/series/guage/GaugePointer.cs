@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities
+﻿namespace ECharts.Entities
 {
     public class GaugePointer
     {
@@ -47,9 +41,5 @@ namespace ECharts.Entities
             this.width = width;
             return this;
         }
-
-
-
-
     }
 }

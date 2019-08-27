@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class ItemStyle
     {
@@ -12,23 +6,16 @@ namespace ECharts.Entities.style
 
         public Emphasis emphasis { get; set; }
 
-        public Normal Normal() {
-            if (normal==null)
-            {
-                this.normal = new Normal();
-            }
+        public Normal Normal()
+        {
+            if (normal == null) normal = new Normal();
             return normal;
         }
 
         public Emphasis Emphasis()
         {
-            if (emphasis == null)
-            {
-                this.emphasis = new Emphasis();
-            }
-            return this.emphasis;
+            if (emphasis == null) emphasis = new Emphasis();
+            return emphasis;
         }
     }
-
-   
 }

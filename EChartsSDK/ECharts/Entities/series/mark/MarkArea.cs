@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ECharts.Entities.style;
+﻿using ECharts.Entities.style;
 
 namespace ECharts.Entities.series.mark
 {
@@ -13,11 +8,9 @@ namespace ECharts.Entities.series.mark
 
         public ItemStyle ItemStyle()
         {
-            if(this.itemStyle==null)
-                this.itemStyle = new ItemStyle();
-            return this.itemStyle;
+            if (itemStyle == null)
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
-
-
     }
 }

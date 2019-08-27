@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series.graph
+﻿namespace ECharts.Entities.series.graph
 {
     public class Force
     {
@@ -47,7 +41,5 @@ namespace ECharts.Entities.series.graph
             this.repulsion = repulsion;
             return this;
         }
-
-
     }
 }

@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.series;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.feature
 {
@@ -26,21 +21,21 @@ namespace ECharts.Entities.feature
         public Chord Chord()
         {
             if (chord == null)
-                chord = new series.Chord();
+                chord = new Chord();
             return chord;
         }
 
         public Pie Pie()
         {
             if (pie == null)
-                pie = new series.Pie();
+                pie = new Pie();
             return pie;
         }
 
         public Funnel Funnel()
         {
             if (funnel == null)
-                funnel = new series.Funnel();
+                funnel = new Funnel();
             return funnel;
         }
 
@@ -48,7 +43,7 @@ namespace ECharts.Entities.feature
         public Line Line()
         {
             if (line == null)
-                line = new series.Line();
+                line = new Line();
             return line;
         }
 
@@ -56,17 +51,15 @@ namespace ECharts.Entities.feature
         public Bar Bar()
         {
             if (bar == null)
-                bar = new series.Bar();
+                bar = new Bar();
             return bar;
         }
 
         public Force Force()
         {
             if (force == null)
-                force = new series.Force();
+                force = new Force();
             return force;
         }
-
-      
     }
 }

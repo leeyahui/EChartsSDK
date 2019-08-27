@@ -1,24 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class EventData
     {
+        public EventData()
+        {
+        }
+
+        public EventData(string name)
+        {
+            this.name = name;
+        }
+
         public string name { get; set; }
 
         public int? weight { get; set; }
 
         public IList<EventEvolution> evolution { get; set; }
-
-        public EventData() { }
-
-        public EventData(string name) {
-            this.name = name;
-        }
 
         public EventData Name(string name)
         {
@@ -36,7 +36,7 @@ namespace ECharts.Entities.series
         {
             if (values == null)
                 return this;
-            this.evolution = values.ToList();
+            evolution = values.ToList();
             return this;
         }
     }

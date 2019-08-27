@@ -1,15 +1,11 @@
-﻿using ECharts.Entities.feature;
+﻿using System.Collections.Generic;
+using ECharts.Entities.feature;
 using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities
 {
-    public class ToolBox:Basic<ToolBox>
-    {     
+    public class ToolBox : Basic<ToolBox>
+    {
         public OrientType? orient { get; set; }
 
         public int? itemGap { get; set; }
@@ -29,7 +25,7 @@ namespace ECharts.Entities
         public Feature feature { get; set; }
 
         public ItemStyle iconStyle { get; set; }
-        
+
 
         public ToolBox ShowTitle(bool showTitle)
         {
@@ -72,7 +68,7 @@ namespace ECharts.Entities
         public Feature Feature()
         {
             if (feature == null)
-                feature = new Entities.feature.Feature();
+                feature = new Feature();
             return feature;
         }
 
@@ -85,17 +81,14 @@ namespace ECharts.Entities
         public TextStyle TextStyle()
         {
             if (textStyle == null)
-                this.textStyle = new style.TextStyle();
-            return this.textStyle;
+                textStyle = new TextStyle();
+            return textStyle;
         }
 
         public ItemStyle IconStyle()
         {
-            if (iconStyle==null)
-            {
-                this.iconStyle = new ItemStyle();
-            }
-            return this.iconStyle;
+            if (iconStyle == null) iconStyle = new ItemStyle();
+            return iconStyle;
         }
     }
 }

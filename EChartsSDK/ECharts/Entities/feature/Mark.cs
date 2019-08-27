@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.feature
 {
@@ -12,6 +7,8 @@ namespace ECharts.Entities.feature
         public bool? show { get; set; }
 
         public MarkTitle title { get; set; }
+
+        public LineStyle lineStyle { get; set; }
 
         public Mark Show(bool show)
         {
@@ -26,12 +23,10 @@ namespace ECharts.Entities.feature
             return title;
         }
 
-        public LineStyle lineStyle { get; set; }
-
         public LineStyle LineStyle()
         {
             if (lineStyle == null)
-                this.lineStyle = lineStyle;
+                lineStyle = lineStyle;
             return lineStyle;
         }
     }

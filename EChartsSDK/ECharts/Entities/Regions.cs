@@ -6,53 +6,32 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-using System.Reflection.Emit;
 using ECharts.Entities.style;
 
+namespace ECharts.Entities
+{
+    public class Regions
+    {
+        public string name { get; set; }
 
-namespace ECharts.Entities {
-	public class Regions {
+        public bool selected { get; set; }
 
-		
-		public string name{
-			get;
-			set;
-		}
+        public ItemStyle itemStyle { get; set; }
 
-		public bool selected{
-			get;
-			set;
-		}
-
-		public ItemStyle itemStyle{
-			get;
-			set;
-		}
-
-        public ItemStyle label
-        {
-			get;
-			set;
-		}
+        public ItemStyle label { get; set; }
 
         public ItemStyle ItemStyle()
         {
-            if(this.itemStyle==null)
+            if (itemStyle == null)
                 itemStyle = new ItemStyle();
-		  return this.itemStyle; 
-		}
+            return itemStyle;
+        }
 
         public ItemStyle Label()
         {
-            if(this.label == null)
+            if (label == null)
                 label = new ItemStyle();
-            return this.label; 
-		}
-
-	}//end Regions
-
-}//end namespace Entities
+            return label;
+        }
+    } //end Regions
+} //end namespace Entities

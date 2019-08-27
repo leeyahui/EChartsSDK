@@ -1,13 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Map : ChartSeries<Map>
     {
+        public Map()
+        {
+            type = ChartType.map;
+        }
+
+        public Map(string name)
+            : this()
+        {
+            this.name = name;
+        }
+
         public SelectedModeType? selectedMode { get; set; }
 
         public string mapType { get; set; }
@@ -118,16 +123,6 @@ namespace ECharts.Entities.series
         {
             this.selectedMode = selectedMode;
             return this;
-        }
-
-        public Map() {
-            this.type = ChartType.map;
-        }
-
-        public Map(string name)
-            : this()
-        {
-            this.name = name;
         }
     }
 }

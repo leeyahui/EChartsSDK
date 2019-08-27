@@ -1,33 +1,27 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ECharts.Entities.style;
 
 namespace ECharts.Entities
 {
-    public class TimeLine  :Basic<TimeLine>,IData<TimeLine>
-    {        
+    public class TimeLine : Basic<TimeLine>, IData<TimeLine>
+    {
         public TimeType? type { get; set; }
 
         public AxisType? axisType { get; set; }
 
         public bool? notMerge { get; set; }
 
-        public bool? realtime { get; set; }       
+        public bool? realtime { get; set; }
 
         public object x2 { get; set; }
 
         public object y2 { get; set; }
 
-         
 
         public bool? inverse { get; set; }
 
         public OrientType? orient { get; set; }
-
-
 
 
         public PositionType? controlPosition { get; set; }
@@ -38,7 +32,7 @@ namespace ECharts.Entities
 
         public int? playInterval { get; set; }
 
-        public LineStyle  lineStyle { get; set; }
+        public LineStyle lineStyle { get; set; }
 
         public EntityStyle<StyleLabel> label { get; set; }
 
@@ -53,6 +47,13 @@ namespace ECharts.Entities
         public int? currentIndex { get; set; }
 
         public IList<object> data { get; set; }
+
+        public TimeLine Data(params object[] values)
+        {
+            if (data == null) data = new List<object>();
+            values.ToList().ForEach(v => data.Add(v));
+            return this;
+        }
 
         public TimeLine Symbol(string symbol)
         {
@@ -103,16 +104,6 @@ namespace ECharts.Entities
             if (label == null)
                 label = new EntityStyle<StyleLabel>();
             return label;
-        }
-
-        public TimeLine Data(params object[] values)
-        {
-            if (data == null)
-            {
-                data = new List<object>();
-            }
-            values.ToList().ForEach(v => data.Add(v));
-            return this;
         }
     }
 }

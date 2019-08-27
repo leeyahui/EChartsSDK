@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
@@ -26,7 +21,7 @@ namespace ECharts.Entities.series
         public int? precision { get; set; }
 
         public Bound bounding { get; set; }
-     
+
         public Effect effect { get; set; }
 
         public ItemStyle itemStyle { get; set; }
@@ -80,11 +75,10 @@ namespace ECharts.Entities.series
         }
 
 
-
         public Bound Bound()
         {
             if (bounding == null)
-                bounding = new series.Bound();
+                bounding = new Bound();
             return bounding;
         }
 
@@ -94,7 +88,7 @@ namespace ECharts.Entities.series
             return this;
         }
 
-        public ECharts.Entities.style.ItemStyle ItemStyle()
+        public ItemStyle ItemStyle()
         {
             if (itemStyle == null)
                 itemStyle = new ItemStyle();
@@ -104,30 +98,29 @@ namespace ECharts.Entities.series
         public Effect Effect()
         {
             if (effect == null)
-                effect = new series.Effect();
+                effect = new Effect();
             return effect;
         }
 
-		public ItemStyle Label()
-		{
-            if(label==null)
-                this.label = new ItemStyle();
-		    return this.label;
-		}
+        public ItemStyle Label()
+        {
+            if (label == null)
+                label = new ItemStyle();
+            return label;
+        }
 
         public EntityStyle<LineStyle> LineStyle()
         {
-            if (this.lineStyle == null)
-                this.lineStyle = new EntityStyle<LineStyle>();
-            return this.lineStyle;
+            if (lineStyle == null)
+                lineStyle = new EntityStyle<LineStyle>();
+            return lineStyle;
         }
 
         public ToolTip ToolTip()
         {
-            if(this.toolTip == null)
-                this.toolTip = new ToolTip();
-            return this.toolTip;
+            if (toolTip == null)
+                toolTip = new ToolTip();
+            return toolTip;
         }
-
     }
 }

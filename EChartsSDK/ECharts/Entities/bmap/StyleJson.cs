@@ -6,53 +6,35 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+namespace ECharts.Entities.bmap
+{
+    public class StyleJson
+    {
+        public string featureType { get; set; }
 
+        public string elementType { get; set; }
 
+        public Styler stylers { get; set; }
 
-namespace ECharts.Entities.bmap {
-	public class StyleJson {
+        /// <param name="featureType"></param>
+        public StyleJson FeatureType(string featureType)
+        {
+            this.featureType = featureType;
+            return this;
+        }
 
-	 
-		public string featureType{
-			get;
-			set;
-		}
+        /// <param name="elementType"></param>
+        public StyleJson ElementType(string elementType)
+        {
+            this.elementType = elementType;
+            return this;
+        }
 
-		public string elementType{
-			get;
-			set;
-		}
-
-		public Styler stylers{
-			get;
-			set;
-		}
-
-		/// 
-		/// <param name="featureType"></param>
-		public StyleJson FeatureType(string featureType){
-		     this.featureType=featureType;
-		return this; 
-		}
-
-		/// 
-		/// <param name="elementType"></param>
-		public StyleJson ElementType(string elementType){
-		     this.elementType=elementType;
-		return this; 
-		}
-
-		/// 
-		/// <param name="stylers"></param>
-		public StyleJson Stylers(Styler stylers){
-		     this.stylers=stylers;
-		return this; 
-		}
-
-	}//end StyleJson
-
-}//end namespace bmap
+        /// <param name="stylers"></param>
+        public StyleJson Stylers(Styler stylers)
+        {
+            this.stylers = stylers;
+            return this;
+        }
+    } //end StyleJson
+} //end namespace bmap

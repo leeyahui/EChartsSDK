@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
-    public class AreaStyle:Style<AreaStyle>
+    public class AreaStyle : Style<AreaStyle>
     {
         public object color { get; set; }
 
@@ -22,6 +16,6 @@ namespace ECharts.Entities.style
         {
             this.type = type;
             return this;
-        } 
+        }
     }
 }

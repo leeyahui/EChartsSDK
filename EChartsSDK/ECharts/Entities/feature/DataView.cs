@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ECharts.Entities.feature
 {
@@ -25,7 +21,7 @@ namespace ECharts.Entities.feature
         public DataView Title(string title)
         {
             this.title = title;
-            return this;        
+            return this;
         }
 
         public DataView ReadOnly(bool? readOnly)
@@ -33,7 +29,5 @@ namespace ECharts.Entities.feature
             this.readOnly = readOnly;
             return this;
         }
-
-
     }
 }

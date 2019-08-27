@@ -21,40 +21,33 @@ namespace ECharts.Entities
     public enum TimeType
     {
         [EnumMember(Value = "time")] time,
-        [EnumMember(Value = "number")] number,
+        [EnumMember(Value = "number")] number
     }
 
     public enum NameLocationType
     {
         [EnumMember(Value = "start")] start,
-        [EnumMember(Value = "middle")]
-        middle,
-        [EnumMember(Value = "end")] end,
+        [EnumMember(Value = "middle")] middle,
+        [EnumMember(Value = "end")] end
     }
 
     public enum LineStepType
     {
-        [EnumMember(Value = "start")]
-        start,
-        [EnumMember(Value = "middle")]
-        middle,
-        [EnumMember(Value = "end")]
-        end,
+        [EnumMember(Value = "start")] start,
+        [EnumMember(Value = "middle")] middle,
+        [EnumMember(Value = "end")] end
     }
 
     public enum LabelPositionType
     {
-        [EnumMember(Value = "start")]
-        start,
-        [EnumMember(Value = "middle")]
-        middle,
-        [EnumMember(Value = "end")]
-        end,
+        [EnumMember(Value = "start")] start,
+        [EnumMember(Value = "middle")] middle,
+        [EnumMember(Value = "end")] end
     }
 
     public enum ImageType
     {
-        [EnumMember(Value = "png")] png,
+        [EnumMember(Value = "png")] png
     }
 
     public enum StyleLabelTyle
@@ -72,8 +65,7 @@ namespace ECharts.Entities
         [EnumMember(Value = "insideTop")] insideTop,
         [EnumMember(Value = "insideBottom")] insideBottom,
         [EnumMember(Value = "start")] start,
-        [EnumMember(Value = "outside")]
-        outside,
+        [EnumMember(Value = "outside")] outside
     }
 
     public enum EffectType
@@ -84,7 +76,7 @@ namespace ECharts.Entities
 
     public enum DirectionType
     {
-        [EnumMember(Value = "inverse")] inverse,
+        [EnumMember(Value = "inverse")] inverse
     }
 
     public enum SortType
@@ -115,12 +107,12 @@ namespace ECharts.Entities
     public enum LinkStyleType
     {
         [EnumMember(Value = "curve")] curve,
-        [EnumMember(Value = "line")] line,
+        [EnumMember(Value = "line")] line
     }
 
     public enum AreaStyleType
     {
-        [EnumMember(Value = "default")] Default,
+        [EnumMember(Value = "default")] Default
     }
 
     public enum LineStyleType
@@ -141,7 +133,7 @@ namespace ECharts.Entities
     }
 
     /// <summary>
-    /// 布局方向
+    ///     布局方向
     /// </summary>
     public enum OrientType
     {
@@ -163,21 +155,21 @@ namespace ECharts.Entities
         [EnumMember(Value = "top")] top,
         [EnumMember(Value = "left")] left,
         [EnumMember(Value = "right")] right,
-        [EnumMember(Value = "none")] none,
+        [EnumMember(Value = "none")] none
     }
 
     /// <summary>
-    /// 水平方式
+    ///     水平方式
     /// </summary>
     public enum HorizontalType
     {
         [EnumMember(Value = "left")] left,
         [EnumMember(Value = "right")] right,
-        [EnumMember(Value = "center")] center,
+        [EnumMember(Value = "center")] center
     }
 
     /// <summary>
-    /// 垂直方式
+    ///     垂直方式
     /// </summary>
     public enum VerticalType
     {
@@ -187,7 +179,7 @@ namespace ECharts.Entities
     }
 
     /// <summary>
-    /// 新窗口打开类型
+    ///     新窗口打开类型
     /// </summary>
     public enum TargetType
     {
@@ -221,8 +213,7 @@ namespace ECharts.Entities
         [EnumMember(Value = "graph")] graph,
         [EnumMember(Value = "sankey")] sankey,
         [EnumMember(Value = "pictorialBar")] pictorialBar,
-        [EnumMember(Value = "themeRiver")]
-        themeRiver,
+        [EnumMember(Value = "themeRiver")] themeRiver
     }
 
     public enum AxisType
@@ -230,7 +221,7 @@ namespace ECharts.Entities
         [EnumMember(Value = "category")] category,
         [EnumMember(Value = "value")] value,
         [EnumMember(Value = "time")] time,
-        [EnumMember(Value = "log")] log,
+        [EnumMember(Value = "log")] log
     }
 
     public enum MarkType
@@ -252,18 +243,14 @@ namespace ECharts.Entities
     {
         [EnumMember(Value = "axis")] axis,
         [EnumMember(Value = "item")] item,
-        [EnumMember(Value = "none")] none,
-
+        [EnumMember(Value = "none")] none
     }
 
     public enum TriggerOnType
     {
-        [EnumMember(Value = "mousemove")]
-        mousemove,
-        [EnumMember(Value = "click")]
-        click,
-        [EnumMember(Value = "none")]
-        none,
+        [EnumMember(Value = "mousemove")] mousemove,
+        [EnumMember(Value = "click")] click,
+        [EnumMember(Value = "none")] none
     }
 
     public enum SymbolType
@@ -287,33 +274,31 @@ namespace ECharts.Entities
         [EnumMember(Value = "emptydroplet")] emptydroplet,
         [EnumMember(Value = "emptypin")] emptypin,
         [EnumMember(Value = "emptyarrow")] emptyarrow,
-        [EnumMember(Value = "emptystar")] emptystar,
+        [EnumMember(Value = "emptystar")] emptystar
     }
 
     public enum DataZoomType
     {
-
         /// <summary>
-        /// 内置型
+        ///     内置型
         /// </summary>
         [EnumMember(Value = "inside")] inside,
 
         /// <summary>
-        /// 滑动条型
+        ///     滑动条型
         /// </summary>
         [EnumMember(Value = "slider")] slider
-
     } //end DataZoomType
 
     public enum ShowEffectType
     {
         /// <summary>
-        /// 绘制完成时
+        ///     绘制完成时
         /// </summary>
         [EnumMember(Value = "render")] render,
 
         /// <summary>
-        /// 高亮时
+        ///     高亮时
         /// </summary>
         [EnumMember(Value = "emphasis")] emphasis
     }
@@ -332,22 +317,17 @@ namespace ECharts.Entities
 
     public enum BrushMode
     {
-        [EnumMember(Value = "single")]
-        single,
-        [EnumMember(Value = "multiple")]
-        multiple
+        [EnumMember(Value = "single")] single,
+        [EnumMember(Value = "multiple")] multiple
     }
 
     public enum BrushThrottleType
     {
-        [EnumMember(Value = "debounce")]
-        debounce,
-        [EnumMember(Value = "fixRate")]
-        fixRate
-        
+        [EnumMember(Value = "debounce")] debounce,
+        [EnumMember(Value = "fixRate")] fixRate
     }
 
-public enum CoordinateSystemType
+    public enum CoordinateSystemType
     {
         [EnumMember(Value = "cartesian2d")] cartesian2d,
         [EnumMember(Value = "geo")] geo,
@@ -358,41 +338,29 @@ public enum CoordinateSystemType
 
     public enum BrushToolBoxType
     {
-        [EnumMember(Value = "rect")]
-        rect,
-        [EnumMember(Value = "polygon")]
-        polygon,
-         [EnumMember(Value = "lineX")]
-         lineX,
-         [EnumMember(Value = "lineY")]
-         lineY,
-         [EnumMember(Value = "keep")]
-         keep,
-         [EnumMember(Value = "clear")]
-         clear
+        [EnumMember(Value = "rect")] rect,
+        [EnumMember(Value = "polygon")] polygon,
+        [EnumMember(Value = "lineX")] lineX,
+        [EnumMember(Value = "lineY")] lineY,
+        [EnumMember(Value = "keep")] keep,
+        [EnumMember(Value = "clear")] clear
     }
 
     public enum VisualMapType
     {
-        [EnumMember(Value = "continuous")]
-        continuous,
-        [EnumMember(Value = "piecewise")]
-        piecewise
+        [EnumMember(Value = "continuous")] continuous,
+        [EnumMember(Value = "piecewise")] piecewise
     }
 
     public enum Orient
     {
-        [EnumMember(Value = "horizontal")]
-        horizontal,
-        [EnumMember(Value = "piecewise")]
-        vertical
+        [EnumMember(Value = "horizontal")] horizontal,
+        [EnumMember(Value = "piecewise")] vertical
     }
 
     public enum SelectedMode
     {
-        [EnumMember(Value = "single")]
-        single,
-        [EnumMember(Value = "multiple")]
-        multiple
+        [EnumMember(Value = "single")] single,
+        [EnumMember(Value = "multiple")] multiple
     }
 }

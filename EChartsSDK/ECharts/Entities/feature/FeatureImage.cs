@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ECharts.Entities.feature
 {
@@ -44,7 +40,7 @@ namespace ECharts.Entities.feature
 
         public FeatureImage Type(string type)
         {
-            this.type = type;                
+            this.type = type;
             return this;
         }
     }

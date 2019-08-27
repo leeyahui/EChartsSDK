@@ -1,13 +1,8 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.axis
 {
-    public class AxisPointer:Basic<AxisPointer>
+    public class AxisPointer : Basic<AxisPointer>
     {
         public bool? show { get; set; }
 
@@ -34,9 +29,9 @@ namespace ECharts.Entities.axis
 
         public AxisLink Link()
         {
-            if (this.link == null)
-                this.link = new AxisLink();
-            return this.link;
+            if (link == null)
+                link = new AxisLink();
+            return link;
         }
 
         public AxisPointer Type(AxisPointType type)
@@ -53,40 +48,27 @@ namespace ECharts.Entities.axis
 
         public AxisLabel Label()
         {
-            if (this.label == null)
-            {
-                this.label = new AxisLabel();
-            }
-            return this.label;
+            if (label == null) label = new AxisLabel();
+            return label;
         }
 
         public LineStyle LineStyle()
         {
-            if (this.lineStyle==null)
-            {
-                this.lineStyle = new style.LineStyle();
-            }
-            return this.lineStyle;
+            if (lineStyle == null) lineStyle = new LineStyle();
+            return lineStyle;
         }
 
         public LineStyle CrossStyle()
         {
-            if (this.crossStyle == null)
-            {
-                this.crossStyle = new style.LineStyle();
-            }
-            return this.crossStyle;
+            if (crossStyle == null) crossStyle = new LineStyle();
+            return crossStyle;
         }
 
 
         public AreaStyle ShadowStyle()
         {
-            if (this.shadowStyle == null)
-            {
-                this.shadowStyle = new style.AreaStyle();
-            }
-            return this.shadowStyle;
+            if (shadowStyle == null) shadowStyle = new AreaStyle();
+            return shadowStyle;
         }
-
     }
 }

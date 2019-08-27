@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.feature
 {
@@ -16,24 +13,23 @@ namespace ECharts.Entities.feature
 
         public FeatureBrush Type(params BrushType[] values)
         {
-            this.type = values.ToList();
+            type = values.ToList();
             return this;
         }
 
         public BrushIcon Icon()
         {
-            if(this.icon == null)
-                this.icon = new BrushIcon();
-            return this.icon;
+            if (icon == null)
+                icon = new BrushIcon();
+            return icon;
         }
 
         public BrushTitle Title()
         {
-            if (this.title == null)
-                this.title = new BrushTitle();
-            return this.title;
+            if (title == null)
+                title = new BrushTitle();
+            return title;
         }
-
     }
 
     public class BrushIcon
@@ -49,8 +45,6 @@ namespace ECharts.Entities.feature
         public string keep { get; set; }
 
         public string clear { get; set; }
-
-
     }
 
     public class BrushTitle
@@ -66,9 +60,5 @@ namespace ECharts.Entities.feature
         public string keep { get; set; }
 
         public string clear { get; set; }
-
-
     }
-
-
 }

@@ -1,14 +1,18 @@
 ﻿using ECharts.Entities.axis;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities
 {
     public class IndicatorData
     {
+        public IndicatorData()
+        {
+        }
+
+        public IndicatorData(string text)
+        {
+            this.text = text;
+        }
+
         public string text { get; set; }
 
         public int? min { get; set; }
@@ -17,20 +21,11 @@ namespace ECharts.Entities
 
         public AxisLabel axisLabel { get; set; }
 
-        public IndicatorData()
-        {
-          
-        }
-
-        public IndicatorData(string text) {
-            this.text = text;
-        }
-
         public AxisLabel AxisLabel()
         {
             if (axisLabel == null)
-                axisLabel = new axis.AxisLabel();
-            return this.axisLabel;
+                axisLabel = new AxisLabel();
+            return axisLabel;
         }
 
         public IndicatorData Text(string text)
@@ -50,6 +45,5 @@ namespace ECharts.Entities
             this.max = max;
             return this;
         }
-
     }
 }

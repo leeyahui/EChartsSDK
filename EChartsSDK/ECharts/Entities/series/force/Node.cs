@@ -1,14 +1,24 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class Node
     {
+        public Node()
+        {
+        }
+
+        public Node(string name)
+        {
+            this.name = name;
+        }
+
+        public Node(string name, int value, int category) : this(name)
+        {
+            this.value = value;
+            this.category = category;
+        }
+
         public string name { get; set; }
 
         public string label { get; set; }
@@ -26,18 +36,6 @@ namespace ECharts.Entities.series
         public int? category { get; set; }
 
         public ItemStyle itemStyle { get; set; }
-
-        public Node() { }
-
-        public Node(string name) {
-            this.name = name;
-        }
-
-        public Node(string name, int value, int category):this(name)
-        {
-            this.value = value;
-            this.category = category;
-        }
 
         public Node Ignore(bool ignore)
         {
@@ -88,14 +86,13 @@ namespace ECharts.Entities.series
             this.draggable = draggable;
             return this;
         }
-    
+
 
         public ItemStyle ItemStyle()
         {
             if (itemStyle == null)
-                this.itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
-
     }
 }

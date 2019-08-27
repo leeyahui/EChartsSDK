@@ -1,14 +1,18 @@
-﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Tree : ChartSeries<Tree>
     {
+        public Tree()
+        {
+            type = ChartType.tree;
+        }
+
+        public Tree(string name)
+            : this()
+        {
+            this.name = name;
+        }
+
         public LocationData rootLocation { get; set; }
 
         public int? layerPadding { get; set; }
@@ -25,7 +29,7 @@ namespace ECharts.Entities.series
 
         public object symbolSize { get; set; }
 
-      
+
         public Tree Symbol(string symbol)
         {
             this.symbol = symbol;
@@ -37,7 +41,6 @@ namespace ECharts.Entities.series
             this.symbolSize = symbolSize;
             return this;
         }
-
 
 
         public Tree Roam(object roam)
@@ -74,16 +77,6 @@ namespace ECharts.Entities.series
         {
             this.rootLocation = rootLocation;
             return this;
-        }
-
-        public Tree() {
-            this.type = ChartType.tree;
-        }
-
-        public Tree(string name)
-            : this()
-        {
-            this.name = name;
         }
     }
 }

@@ -1,13 +1,8 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
-    public class MarkPoint:AbstractData<MarkPoint>
+    public class MarkPoint : AbstractData<MarkPoint>
     {
         public ToolTip toolTip { get; set; }
 
@@ -24,7 +19,7 @@ namespace ECharts.Entities.series
         public Effect effect { get; set; }
 
         public ItemStyle itemStyle { get; set; }
-                        
+
         public MarkPoint SymbolRotate(object symbolRotate)
         {
             this.symbolRotate = symbolRotate;
@@ -60,11 +55,8 @@ namespace ECharts.Entities.series
         public Effect Effect()
         {
             if (effect == null)
-                effect = new series.Effect();
+                effect = new Effect();
             return effect;
         }
-
     }
- 
-
 }

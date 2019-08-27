@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.feature
+﻿namespace ECharts.Entities.feature
 {
     public class MagicTitle
     {
@@ -72,8 +66,5 @@ namespace ECharts.Entities.feature
             this.line = line;
             return this;
         }
-
-
-
     }
 }

@@ -1,21 +1,14 @@
 ﻿using ECharts.Entities.data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
-    public class MarkData:BasicData<MarkData>
+    public class MarkData : BasicData<MarkData>
     {
-      
-        public MarkData() : base()
+        public MarkData()
         {
-
         }
 
-        public MarkData(string name, MarkType type):this()
+        public MarkData(string name, MarkType type) : this()
         {
             this.name = name;
             this.type = type;
@@ -30,9 +23,5 @@ namespace ECharts.Entities.series
         {
             this.name = name;
         }
-
-       
-
-
     }
 }

@@ -1,14 +1,18 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class Link
     {
+        public Link()
+        {
+        }
+
+        public Link(string name)
+        {
+            this.name = name;
+        }
+
         public string name { get; set; }
 
         public object source { get; set; }
@@ -19,23 +23,12 @@ namespace ECharts.Entities.series
 
         public ItemStyle itemStyle { get; set; }
 
-        public Link()
-        {             
-           
-        }
-
-        public Link(string name)
-        {
-            this.name = name;           
-        }
-
 
         public Link Name(string name)
         {
             this.name = name;
             return this;
         }
-
 
 
         public Link Source(object source)
@@ -59,8 +52,8 @@ namespace ECharts.Entities.series
         public ItemStyle ItemStyle()
         {
             if (itemStyle == null)
-                this.itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class IconStyle
     {
@@ -17,8 +11,8 @@ namespace ECharts.Entities.style
         public TextStyle TextStyle()
         {
             if (textStyle == null)
-                this.textStyle = new TextStyle();
-            return this.textStyle;
+                textStyle = new TextStyle();
+            return textStyle;
         }
 
         public IconStyle Name(string name)
@@ -32,6 +26,5 @@ namespace ECharts.Entities.style
             this.icon = icon;
             return this;
         }
-
     }
 }

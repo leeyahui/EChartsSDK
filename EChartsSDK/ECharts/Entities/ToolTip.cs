@@ -1,16 +1,11 @@
 ﻿using ECharts.Entities.axis;
 using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities
 {
-    public class ToolTip:Basic<ToolTip>
-    {     
-        public bool? showContent{ get; set; }
+    public class ToolTip : Basic<ToolTip>
+    {
+        public bool? showContent { get; set; }
 
         public TriggerType? trigger { get; set; }
 
@@ -28,23 +23,19 @@ namespace ECharts.Entities
 
         public double? transitionDuration { get; set; }
 
-        public bool? enterable { get; set; }        
+        public bool? enterable { get; set; }
 
         public int? borderRadius { get; set; }
 
-        
 
-        public AxisPointer axisPointer { get; set; }    
+        public AxisPointer axisPointer { get; set; }
 
         public TextStyle textStyle { get; set; }
 
         public TextStyle TextStyle()
         {
-            if (this.textStyle == null)
-            {
-                this.textStyle = new TextStyle();
-            }
-            return this.textStyle;
+            if (textStyle == null) textStyle = new TextStyle();
+            return textStyle;
         }
 
         public ToolTip BorderWidth(int borderWidth)
@@ -118,16 +109,12 @@ namespace ECharts.Entities
         {
             this.triggerOn = triggerOn;
             return this;
-        }        
+        }
 
         public AxisPointer AxisPointer()
         {
-            if (this.axisPointer==null)
-            {
-                this.axisPointer = new AxisPointer();
-            }
-            return this.axisPointer;
+            if (axisPointer == null) axisPointer = new AxisPointer();
+            return axisPointer;
         }
-
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Effect
     {
@@ -26,7 +20,6 @@ namespace ECharts.Entities.series
 
         public int? shadowBlur { get; set; }
 
-       
 
         public Effect Loop(bool loop)
         {
@@ -78,10 +71,8 @@ namespace ECharts.Entities.series
 
         public Effect Period(int loop)
         {
-            this.period = period;
+            period = period;
             return this;
-        }       
-
-
+        }
     }
 }

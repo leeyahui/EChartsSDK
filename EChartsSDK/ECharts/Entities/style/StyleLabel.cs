@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class StyleLabel
     {
@@ -70,9 +64,9 @@ namespace ECharts.Entities.style
 
         public TextStyle TextStyle()
         {
-            if (this.textStyle == null)
-                this.textStyle = new style.TextStyle();
-            return this.textStyle;
+            if (textStyle == null)
+                textStyle = new TextStyle();
+            return textStyle;
         }
 
         public StyleLabel Position(StyleLabelTyle position)

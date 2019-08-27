@@ -1,24 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.axis
+﻿namespace ECharts.Entities.axis
 {
     public class LogAxis : ChartAxis<LogAxis>
     {
+        public LogAxis()
+        {
+            type = AxisType.log;
+        }
+
         public bool? logPositive { get; set; }
 
         public int? logLabelBase { get; set; }
 
-
-        public LogAxis()
-        {
-            this.type = AxisType.log;
-        }
-
-     
 
         public LogAxis LogLabelBase(int logLabelBase)
         {
@@ -31,8 +23,5 @@ namespace ECharts.Entities.axis
             this.logPositive = logPositive;
             return this;
         }
-
-
-
     }
 }

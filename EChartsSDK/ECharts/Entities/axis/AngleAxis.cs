@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.axis
+﻿namespace ECharts.Entities.axis
 {
-    public class AngleAxis : ChartAxis<AngleAxis> 
+    public class AngleAxis : ChartAxis<AngleAxis>
     {
+        public AngleAxis()
+        {
+        }
+
+        public AngleAxis(AxisType type)
+        {
+            this.type = type;
+        }
+
         public int? polarIndex { get; set; }
 
         public int? startAngle { get; set; }
@@ -15,15 +18,6 @@ namespace ECharts.Entities.axis
         public bool? clockwise { get; set; }
 
         public bool? boundaryGap { get; set; }
-
-        public AngleAxis()
-        {          
-        }
-
-        public AngleAxis(AxisType type)
-        {
-            this.type = type;
-        }
 
         public AngleAxis BoundaryGap(bool boundaryGap)
         {
@@ -34,7 +28,7 @@ namespace ECharts.Entities.axis
         public AngleAxis Type(AxisType type)
         {
             this.type = type;
-            return this ;
+            return this;
         }
 
         public AngleAxis Clockwise(bool clockwise)
@@ -46,7 +40,7 @@ namespace ECharts.Entities.axis
         public AngleAxis StartAngle(int startAngle)
         {
             this.startAngle = startAngle;
-            return  this;
+            return this;
         }
 
         public AngleAxis PolarIndex(int polarIndex)

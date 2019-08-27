@@ -1,14 +1,14 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.series
 {
     public class Category
     {
+        public Category(string name)
+        {
+            this.name = name;
+        }
+
         public string name { get; set; }
 
         public string symbol { get; set; }
@@ -16,10 +16,6 @@ namespace ECharts.Entities.series
         public object symbolSize { get; set; }
 
         public ItemStyle itemStyle { get; set; }
-
-        public Category(string name) {
-            this.name = name;
-        }
 
         public Category SymbolSize(object symbolSize)
         {
@@ -43,9 +39,8 @@ namespace ECharts.Entities.series
         public ItemStyle ItemStyle()
         {
             if (itemStyle == null)
-                this.itemStyle = new style.ItemStyle();
-            return this.itemStyle;
+                itemStyle = new ItemStyle();
+            return itemStyle;
         }
-
     }
 }

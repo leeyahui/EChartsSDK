@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.style
+﻿namespace ECharts.Entities.style
 {
     public class TextStyle
     {
@@ -76,6 +69,7 @@ namespace ECharts.Entities.style
             this.decoration = decoration;
             return this;
         }
+
         public TextStyle FontSize(int fontSize)
         {
             this.fontSize = fontSize;

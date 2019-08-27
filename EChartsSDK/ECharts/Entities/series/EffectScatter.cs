@@ -6,54 +6,14 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-
-
-
-using ECharts.Entities.series;
-namespace ECharts.Entities.series {
-	public class EffectScatter : Scatter {
-
-	    public string effectType { get; set; }
-
-        public ShowEffectType showEffectOn { get; set; }
-
-
-	    public RippleEffect rippleEffect { get; set; }
-
-	    public EffectScatter EffectType(string effectType)
-	    {
-	        this.effectType = effectType;
-	        return this;
-	    }
-
-        public EffectScatter ShowEffectOn(ShowEffectType showEffectOn)
+namespace ECharts.Entities.series
+{
+    public class EffectScatter : Scatter
+    {
+        public EffectScatter()
         {
-            this.showEffectOn = showEffectOn;
-            
-            return this;
+            type = ChartType.effectScatter;
         }
-
-        public RippleEffect RippleEffect()
-        {
-            if (this.rippleEffect == null)
-                rippleEffect = new RippleEffect();
-            return rippleEffect;
-        }
-
-        public RippleEffect RippleEffect(RippleEffect rippleEffect)
-	    {
-            this.rippleEffect = rippleEffect;
-	        return rippleEffect;
-	    }
-
-	    public EffectScatter()
-	    {
-	        this.type = ChartType.effectScatter;
-	    }
 
         public EffectScatter(string name)
             : this()
@@ -61,8 +21,37 @@ namespace ECharts.Entities.series {
             this.name = name;
         }
 
+        public string effectType { get; set; }
 
-        
-	}//end EffectScatter
+        public ShowEffectType showEffectOn { get; set; }
 
-}//end namespace series
+
+        public RippleEffect rippleEffect { get; set; }
+
+        public EffectScatter EffectType(string effectType)
+        {
+            this.effectType = effectType;
+            return this;
+        }
+
+        public EffectScatter ShowEffectOn(ShowEffectType showEffectOn)
+        {
+            this.showEffectOn = showEffectOn;
+
+            return this;
+        }
+
+        public RippleEffect RippleEffect()
+        {
+            if (rippleEffect == null)
+                rippleEffect = new RippleEffect();
+            return rippleEffect;
+        }
+
+        public RippleEffect RippleEffect(RippleEffect rippleEffect)
+        {
+            this.rippleEffect = rippleEffect;
+            return rippleEffect;
+        }
+    } //end EffectScatter
+} //end namespace series

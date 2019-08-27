@@ -1,13 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
     public class Line : Rectangular<Line>
     {
+        public Line()
+        {
+            type = ChartType.line;
+        }
+
+        public Line(string name) : this()
+        {
+            this.name = name;
+        }
+
         public bool? showAllSymbol { get; set; }
 
         public bool? smooth { get; set; }
@@ -18,16 +22,7 @@ namespace ECharts.Entities.series
         public object step { get; set; }
 
 
-
         public SamplingType sampling { get; set; }
-
-        public Line() {
-            this.type = ChartType.line;
-        }
-
-        public Line(string name):this() {
-            this.name = name;
-        }
 
         public Line ShowAllSymbol(bool showAllSymbol)
         {
@@ -59,10 +54,10 @@ namespace ECharts.Entities.series
             return this;
         }
 
-        public Line Smooth(bool smooth) {
+        public Line Smooth(bool smooth)
+        {
             this.smooth = smooth;
             return this;
         }
-
     }
 }

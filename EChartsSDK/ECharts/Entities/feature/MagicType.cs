@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities.feature
 {
@@ -40,21 +37,16 @@ namespace ECharts.Entities.feature
 
         public MagicTitle Title()
         {
-            if (this.title == null)
-                this.title = new MagicTitle();
-            return this.title;
+            if (title == null)
+                title = new MagicTitle();
+            return title;
         }
 
         public MagicOption Option()
         {
-            if (this.option == null)
+            if (option == null)
                 option = new MagicOption();
             return option;
         }
-
-         
-
-
     }
-
 }

@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ECharts.Entities.series
+﻿namespace ECharts.Entities.series
 {
-    public class Scatter :Rectangular<Scatter>
+    public class Scatter : Rectangular<Scatter>
     {
+        public Scatter()
+        {
+            type = ChartType.scatter;
+        }
+
+        public Scatter(string name) : this()
+        {
+            this.name = name;
+        }
 
         public bool? large { get; set; }
 
@@ -32,15 +35,6 @@ namespace ECharts.Entities.series
         {
             this.large = large;
             return this;
-        }
-
-
-        public Scatter() {
-            this.type = ChartType.scatter;
-        }
-
-        public Scatter(string name) : this() {
-            this.name = name;
         }
     }
 }

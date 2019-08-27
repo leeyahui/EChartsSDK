@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace ECharts.Entities.axis
 {
@@ -27,13 +23,13 @@ namespace ECharts.Entities.axis
 
         public AxisLink XAxisIndex(params double[] values)
         {
-            this.xAxisIndex = values.ToList();
+            xAxisIndex = values.ToList();
             return this;
         }
 
         public AxisLink YAxisIndex(params double[] values)
         {
-            this.yAxisIndex = values.ToList();
+            yAxisIndex = values.ToList();
             return this;
         }
 
@@ -50,9 +46,5 @@ namespace ECharts.Entities.axis
             this.yAxisName = yAxisName;
             return this;
         }
-
-
-
-
     }
 }

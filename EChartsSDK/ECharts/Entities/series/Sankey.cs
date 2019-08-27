@@ -6,16 +6,20 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+namespace ECharts.Entities.series
+{
+    public class Sankey : ChartSeries<Sankey>
+    {
+        public Sankey()
+        {
+            type = ChartType.sankey;
+        }
 
-
-
-using ECharts.Entities.series;
-namespace ECharts.Entities.series {
-	public class Sankey : ChartSeries<Sankey> {
+        public Sankey(string name)
+            : this()
+        {
+            this.name = name;
+        }
 
         public string layout { get; set; }
 
@@ -23,40 +27,22 @@ namespace ECharts.Entities.series {
 
         public object categories { get; set; }
 
-
-          public Sankey()
+        public Sankey Categories(object categories)
         {
-            this.type = ChartType.sankey;
+            this.categories = categories;
+            return this;
         }
 
-          public Sankey(string name)
-              : this()
-          {
-            this.name = name;
+        public Sankey Links(object links)
+        {
+            this.links = links;
+            return this;
         }
 
-          public Sankey Categories(object categories)
-          {
-              this.categories = categories;
-              return this;
-          }
-
-          public Sankey Links(object links)
-          {
-              this.links = links;
-              return this;
-          }
-
-          public Sankey Layout(string layout)
-          {
-              this.layout = layout;
-              return this;
-          }
-         
-
-
-		 
-
-	}//end Parallel
-
-}//end namespace series
+        public Sankey Layout(string layout)
+        {
+            this.layout = layout;
+            return this;
+        }
+    } //end Parallel
+} //end namespace series

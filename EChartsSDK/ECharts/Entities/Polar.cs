@@ -1,13 +1,10 @@
-﻿using ECharts.Entities.axis;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ECharts.Entities.axis;
 
 namespace ECharts.Entities
 {
-    public class Polar:Basic<Polar>
+    public class Polar : Basic<Polar>
     {
         public int? radius { get; set; }
 
@@ -22,7 +19,7 @@ namespace ECharts.Entities
         public IList<double> boundaryGap { get; set; }
 
         public AxisLine axisLine { get; set; }
-       
+
         public AxisLabel axisLabel { get; set; }
 
         public SplitLine splitLine { get; set; }
@@ -50,7 +47,7 @@ namespace ECharts.Entities
             axisLine = new AxisLine();
             return axisLine;
         }
-       
+
         public SplitLine SplitLine()
         {
             splitLine = new SplitLine();
@@ -61,13 +58,13 @@ namespace ECharts.Entities
         {
             splitArea = new SplitArea();
             return splitArea;
-        }        
+        }
 
         public AxisName Name()
         {
             if (name == null)
-                this.name = new AxisName();
-            return this.name;
+                name = new AxisName();
+            return name;
         }
 
         public Polar SplitNumber(int splitNumber)
@@ -78,7 +75,7 @@ namespace ECharts.Entities
 
         public Polar Indicator(params IndicatorData[] values)
         {
-            if (this.indicator == null)
+            if (indicator == null)
                 indicator = new List<IndicatorData>();
             indicator = values.ToList();
             return this;
@@ -98,7 +95,7 @@ namespace ECharts.Entities
 
         public Polar StartAngle(int radius)
         {
-            this.startAngle = startAngle;
+            startAngle = startAngle;
             return this;
         }
 
@@ -107,8 +104,5 @@ namespace ECharts.Entities
             this.radius = radius;
             return this;
         }
-
-
-
     }
 }

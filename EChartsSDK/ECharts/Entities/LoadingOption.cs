@@ -1,9 +1,4 @@
 ﻿using ECharts.Entities.style;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECharts.Entities
 {
@@ -15,7 +10,7 @@ namespace ECharts.Entities
 
         public object y { get; set; }
 
-        public TextStyle  textStyle { get; set; }
+        public TextStyle textStyle { get; set; }
 
         public object effect { get; set; }
 
@@ -58,8 +53,5 @@ namespace ECharts.Entities
             this.text = text;
             return this;
         }
-
     }
-
-   
 }

@@ -6,27 +6,20 @@
 //  Original author: Doku
 ///////////////////////////////////////////////////////////
 
-using System;
 using System.Collections.Generic;
-using System.Text;
-using System.IO;
+
+namespace ECharts.Entities.bmap
+{
+    public class MapStyle
+    {
+        public IList<StyleJson> styleJson { get; set; }
 
 
-
-namespace ECharts.Entities.bmap {
-	public class MapStyle {
-
-	    public IList<StyleJson> styleJson { get; set; }
-         
-		 
-
-		/// 
-		/// <param name="stylejson"></param>
-		public MapStyle StyleJson(IList<StyleJson> styleJson){
+        /// <param name="stylejson"></param>
+        public MapStyle StyleJson(IList<StyleJson> styleJson)
+        {
             this.styleJson = styleJson;
-		return this; 
-		}
-
-	}//end MapStyle
-
-}//end namespace bmap
+            return this;
+        }
+    } //end MapStyle
+} //end namespace bmap
